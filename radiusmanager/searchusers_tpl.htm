@@ -1,0 +1,277 @@
+<link href="styles.css" rel="stylesheet" type="text/css"> 
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{FNDUSR0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr> 
+    <td><table width="100%" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#D3D9E6" class="tb-bdr">
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="5" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td><form name="form1" action="admin.php?cont=list_users" method="post" onSubmit="setFilter();">
+                    <p class="title2">{FNDUSR1}</p>
+                    <table border="0" align="center" cellpadding="2" cellspacing="2">
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"> {FNDUSR2}: 
+                          </div></td>
+                        <td class="normal"><input name="username" type="text" class="normal" id="username2" size="32" maxlength="32"> 
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td colspan="2" nowrap class="normal"><table width="100%" border="0" cellspacing="2" cellpadding="2">
+                            <tr class="normal"> 
+                              <td nowrap><div align="right">{FNDUSR35}:</div></td>
+                              <td nowrap> <input name="acctype02" type="checkbox" id="acctype0" value="1" {CHKACCTYPE0}>
+                                {FNDUSR37} <br> <input name="acctype12" type="checkbox" id="acctype1" value="1" {CHKACCTYPE1}>
+                                {FNDUSR38} <br> <input name="acctype62" type="checkbox" id="acctype6" value="1" {CHKACCTYPE6} {ENACCTYPE6}>
+                                {FNDUSR39} <br> <input name="acctype22" type="checkbox" id="acctype2" value="1" {CHKACCTYPE2} {ENACCTYPE2}>
+                                {FNDUSR44} <br> <input name="acctype52" type="checkbox" id="acctype5" value="1" {CHKACCTYPE5} {ENACCTYPE5}>
+                                {FNDUSR45} <br> <input name="acctype32" type="checkbox" id="acctype3" value="1" {CHKACCTYPE3}>
+                                {FNDUSR40} <br> <input name="acctype42" type="checkbox" id="acctype4" value="1" {CHKACCTYPE4}>
+                                {FNDUSR41} 
+                                <input name="listacctype" type="hidden" id="listacctype" value="0"> 
+                                <input name="setcookie" type="hidden" id="setcookie" value="1"> 
+                              </td>
+                              <td nowrap><div align="right">{FNDUSR4}:</div></td>
+                              <td nowrap> <input name="srvtype" type="radio" value="-1" {CHKSRVTYPE0}>
+                                {FNDUSR17} <br> <input type="radio" name="srvtype" value="0" {CHKSRVTYPE1}>
+                                {FNDUSR20} <br> <input type="radio" name="srvtype" value="2" {CHKSRVTYPE2}>
+                                {FNDUSR21} <br> <input type="radio" name="srvtype" value="3" {CHKSRVTYPE3}>
+                                {FNDUSR22} <br> <input type="radio" name="srvtype" value="4" {CHKSRVTYPE4}>
+                                {FNDUSR26} </td>
+                            </tr>
+                            <tr class="normal"> 
+                              <td nowrap><div align="right">{FNDUSR3}:</div></td>
+                              <td nowrap> <input name="status" type="radio" value="-1" {CHKACCSTATUS0}>
+                                {FNDUSR17}<br> <input name="status" type="radio" value="0" {CHKACCSTATUS1} {ENACTIVE}>
+                                {FNDUSR42}<br> <input name="status" type="radio" value="1" {CHKACCSTATUS2} {ENEXPIRED}>
+                                {FNDUSR43}<br> <input name="status" type="radio" value="2" {CHKACCSTATUS3}>
+                                {FNDUSR18}<br> <input type="radio" name="status" value="3" {CHKACCSTATUS4}>
+                                {FNDUSR19}</td>
+                              <td nowrap><div align="right">{FNDUSR46}:</div></td>
+                              <td nowrap> <input name="acctinfo" type="radio" value="-1" {CHKACCTINFO0}>
+                                {FNDUSR47}<br> <input name="acctinfo" type="radio" value="0" {CHKACCTINFO1}>
+                                {FNDUSR48}<br> <input name="acctinfo" type="radio" value="1" {CHKACCTINFO2}>
+                                {FNDUSR49}</td>
+                            </tr>
+                            <tr class="normal"> 
+                              <td nowrap><div align="right">{FNDUSR52}:</div></td>
+                              <td nowrap> <input name="cardstatus" type="radio" value="-1" {CHKCARDSTATUS0}>
+                                {FNDUSR53}<br> <input name="cardstatus" type="radio" value="1" {CHKCARDSTATUS1}>
+                                {FNDUSR54}<br> <input name="cardstatus" type="radio" value="0" {CHKCARDSTATUS2}>
+                                {FNDUSR55}</td>
+                              <td nowrap>&nbsp;</td>
+                              <td nowrap>&nbsp;</td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR32}:</div></td>
+                        <td class="normal"><select name="groupid" class="normal" id="groupid"> {GROUPLIST}
+                          </select></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR33}:</div></td>
+                        <td class="normal"><strong> 
+                          <select name="owner" class="normal" id="owner">{OWNERLIST}
+                          </select>
+                          </strong></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR13}:</div></td>
+                        <td class="normal"><strong> 
+                          <select name="srvid" class="normal" id="srvid">{SRVLIST}
+                          </select>
+                          </strong></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR25}:</div></td>
+                        <td class="normal"><input name="maccm" type="text" class="normal" id="maccm" maxlength="17" size="18">
+                          (xx:xx:xx:xx:xx:xx) </td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR56}:</div></td>
+                        <td class="normal"><input name="cmip" type="text" class="normal" id="cmip" maxlength="15" size="15">
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"> {FNDUSR5}:</div></td>
+                        <td class="normal"><input name="mac" type="text" class="normal" id="mac" maxlength="17" size="18">
+                          (xx:xx:xx:xx:xx:xx)</td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"> {FNDUSR6}:</div></td>
+                        <td class="normal"><input name="cpeip" type="text" class="normal" id="cpeip" maxlength="15" size="15"> 
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR27}:</div></td>
+                        <td class="normal"><input name="firstname" type="text" class="normal" id="firstname" maxlength="50" size="50"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR28}:</div></td>
+                        <td class="normal"><input name="lastname" type="text" class="normal" id="lastname" maxlength="50" size="50"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR7}:</div></td>
+                        <td class="normal"><input name="company" type="text" class="normal" id="company" maxlength="50" size="50"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR10}:</div></td>
+                        <td class="normal"><input name="address" type="text" class="normal" id="address" maxlength="100" size="50"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR11}:</div></td>
+                        <td class="normal"><input name="city" type="text" class="normal" id="city" maxlength="15" size="15"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR12}:</div></td>
+                        <td class="normal"><input name="zip" type="text" class="normal" id="zip" maxlength="8" size="8"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR30}:</div></td>
+                        <td class="normal"><strong> 
+                          <select name="country" class="normal" id="select7"> {COUNTRYLIST}
+                                        
+                                        
+                          </select>
+                          </strong></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR31}:</div></td>
+                        <td class="normal"><select name="state" class="normal" id="select8"> {STATESLIST}
+                           
+                                        
+                                        
+                          </select></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR8}:</div></td>
+                        <td class="normal"><input name="phone" type="text" class="normal" id="phone" maxlength="15" size="15"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR9}:</div></td>
+                        <td class="normal"><input name="mobile" type="text" class="normal" id="mobile" maxlength="15" size="15"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR29}:</div></td>
+                        <td class="normal"><input name="email" type="text" class="normal" id="email" maxlength="50" size="50"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR34}:</div></td>
+                        <td class="normal"><input name="contractid" type="text" class="normal" id="contractid" maxlength="50" size="50"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR50}:</div></td>
+                        <td class="normal"><input name="contractfrom" type="text" class="normal" id="contractfrom" size="10" maxlength="10"> 
+                          <span class="normal"> <A NAME="anchor1" ID="anchor1"><img src="images/cal.gif" width="16" height="15"
+			  onClick="cal.select(document.forms['form1'].contractfrom,'anchor1','yyyy-MM-dd'); return false;"></A> 
+                          </span> - 
+                          <input name="contractto" type="text" class="normal" id="contractto" size="10" maxlength="10"> 
+                          <span class="normal"> <A NAME="anchor2" ID="anchor2"><img src="images/cal.gif" width="16" height="15"
+			  onClick="cal.select(document.forms['form1'].contractto,'anchor2','yyyy-MM-dd'); return false;"></A></span> 
+                          <DIV ID="div1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+                          <SCRIPT LANGUAGE="JavaScript" SRC="scripts/calendarpopup.js"></SCRIPT> 
+                          <SCRIPT LANGUAGE="JavaScript">
+var cal = new CalendarPopup("div1");
+document.write(getCalendarStyles());
+</SCRIPT> <span class="normal"> </span></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR51}:</div></td>
+                        <td class="normal"><input name="regdatefrom" type="text" class="normal" id="regdatefrom" size="10" maxlength="10"> 
+                          <span class="normal"> <A NAME="anchor3" ID="anchor3"><img src="images/cal.gif" width="16" height="15"
+			  onClick="cal.select(document.forms['form1'].regdatefrom,'anchor3','yyyy-MM-dd'); return false;"></A> 
+                          </span> - 
+                          <input name="regdateto" type="text" class="normal" id="regdateto" size="10" maxlength="10"> 
+                          <span class="normal"> <A NAME="anchor4" ID="anchor4"><img src="images/cal.gif" width="16" height="15"
+			  onClick="cal.select(document.forms['form1'].regdateto,'anchor4','yyyy-MM-dd'); return false;"></A></span> 
+                          <DIV ID="div1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+                          <SCRIPT LANGUAGE="JavaScript" SRC="scripts/calendarpopup.js"></SCRIPT> 
+                          <SCRIPT LANGUAGE="JavaScript">
+var cal = new CalendarPopup("div1");
+document.write(getCalendarStyles());
+</SCRIPT> <span class="normal"> </span></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{FNDUSR14}:</div></td>
+                        <td class="normal"><input name="comment" type="text" class="normal" id="comment" maxlength="200" size="50"></td>
+                      </tr>
+                    </table>
+                    <p align="center" class="normal"> 
+                      <input type="submit"  name="Submit" id="submit" value="{FNDUSR23}" {ENANBLEFIND}>
+                      <SCRIPT type=text/javascript><!--
+function setFilter()
+{
+  var bitmap = 0;
+  if (document.form1.acctype0.checked)
+    bitmap += 1;
+  if (document.form1.acctype1.checked)
+    bitmap += 2;
+  if (document.form1.acctype2.checked)
+    bitmap += 4;
+  if (document.form1.acctype3.checked)
+    bitmap += 8;
+  if (document.form1.acctype4.checked)
+    bitmap += 16;
+  if (document.form1.acctype5.checked)
+    bitmap += 32;
+  if (document.form1.acctype6.checked)
+    bitmap += 64;
+
+  document.form1.listacctype.value = bitmap;
+}
+focusField("username");
+function focusField(name) {
+  for(var i = 0; i < document.forms.length; ++i) {
+    var obj = document.forms[i].elements[name];
+    if (obj) {
+      if (obj.length) { obj = obj[0]; }
+      if (obj.focus) { obj.focus(); }
+    }
+  }
+} 
+//--> </SCRIPT>
+                    </p>
+                  </form> </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+    <td valign="top"><table width="100%" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#D3D9E6" class="tb-bdr">
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="5" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td><form name="form2" method="post" action="admin.php?cont=edit_user">
+                    <p class="title2">{FNDUSR15}</p>
+                    <table border="0" align="center" cellpadding="2" cellspacing="2">
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"> {FNDUSR16}: 
+                          </div></td>
+                        <td class="normal"><input name="username" type="text" class="normal" id="username" size="32" maxlength="32"> 
+                        </td>
+                      </tr>
+                    </table>
+                    <p align="center"> 
+                      <input type="submit" name="Submit" id="submit" value="{FNDUSR24}">
+                    </p>
+                  </form> </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

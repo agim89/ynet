@@ -1,0 +1,110 @@
+<link href="styles.css" rel="stylesheet" type="text/css"> 
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{TRFFLTR0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#D3D9E6" class="tb-bdr">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="5" cellspacing="0" class="tb-bg">
+        <tr> 
+          <td> <form name="form1" action="admin.php?cont=traffic_report" method="post"">
+              <table border="0" align="center" cellpadding="2" cellspacing="2">
+                <tr> 
+                  <td nowrap class="normal"><div align="right"> {TRFFLTR1}: </div></td>
+                  <td class="normal"><input name="username" type="text" class="normal" id="username5" size="32" maxlength="32"> 
+                    <font color="#666666"><em>{TRFFLTR4}</em></font></td>
+                </tr>
+                <tr> 
+                  <td nowrap class="normal"><div align="right"> {TRFFLTR2}:</div></td>
+                  <td class="normal"><input name="framedip" type="text" class="normal" id="framedip" maxlength="15" size="15"> 
+                  </td>
+                </tr>
+                <tr> 
+                  <td nowrap class="normal"><div align="right"> {TRFFLTR3}:</div></td>
+                  <td class="normal"><input name="stationid" type="text" class="normal" id="stationid" maxlength="17" size="17"> 
+                    <font color="#666666"><em>{TRFFLTR5}</em></font></td>
+                </tr>
+                <tr> 
+                  <td nowrap class="normal"><div align="right">{TRFFLTR12}:</div></td>
+                  <td class="normal"><select name="nasid" class="normal" id="nasid"> {NASLIST}
+                    </select></td>
+                </tr>
+                <tr> 
+                  <td nowrap class="normal"><div align="right">{TRFFLTR13}:</div></td>
+                  <td class="normal"><select name="apid" class="normal" id="apid"> {APLIST}
+                    </select></td>
+                </tr>
+                <tr> 
+                  <td nowrap class="normal"><div align="right">{TRFFLTR7}:</div></td>
+                  <td class="normal"><input name="enableint" type="checkbox" id="enableint" value="1" onClick="setInt()" {CHKENABLEINT}></td>
+                </tr>
+                <tr> 
+                  <td nowrap class="normal"><div align="right">{TRFFLTR9}:</div></td>
+                  <td class="normal"> <input name="filterfrom" type="text" class="normal" id="filterfrom" value="{FILTERFROM}" size="10" maxlength="10"> 
+                    <span class="normal"> <A NAME="anchor1" ID="anchor1"><img src="images/cal.gif" width="16" height="15"
+			  onClick="cal.select(document.forms['form1'].filterfrom,'anchor1','yyyy-MM-dd'); return false;"></A> 
+                    ({TRFFLTR11})</span></td>
+                </tr>
+                <tr> 
+                  <td nowrap class="normal"><div align="right">{TRFFLTR10}:</div></td>
+                  <td class="normal"><input name="filterto" type="text" class="normal" id="filterto" value="{FILTERTO}" size="10" maxlength="10"> 
+                    <span class="normal"> <A NAME="anchor2" ID="anchor2"><img src="images/cal.gif" width="16" height="15"
+			  onClick="cal.select(document.forms['form1'].filterto,'anchor2','yyyy-MM-dd'); return false;"></A> 
+                    ({TRFFLTR11}) </span> <DIV ID="div1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+                    <SCRIPT LANGUAGE="JavaScript" SRC="scripts/calendarpopup.js"></SCRIPT> 
+                    <SCRIPT LANGUAGE="JavaScript">
+var cal = new CalendarPopup("div1");
+document.write(getCalendarStyles());
+</SCRIPT></td>
+                </tr>
+              </table>
+              <p align="center" class="normal"> 
+                <input type="submit" name="Submit" value="{TRFFLTR6}" {SEARCHSTATE}>
+                <SCRIPT type=text/javascript><!--
+focusField("username");
+setInt();
+
+function focusField(name) {
+  for(var i = 0; i < document.forms.length; ++i) {
+    var obj = document.forms[i].elements[name];
+    if (obj) {
+      if (obj.length) { obj = obj[0]; }
+      if (obj.focus) { obj.focus(); }
+    }
+  }
+} 
+
+function setInt()
+{
+	var btn1 = document.form1.enableint.checked;
+	
+	if (btn1)
+	{
+		document.form1.filterfrom.disabled = false;
+		document.form1.filterto.disabled = false;
+    }
+	else
+	{
+		document.form1.filterfrom.disabled = true;
+		document.form1.filterto.disabled = true;
+    }
+}
+//--> </SCRIPT>
+              </p>
+              </form></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

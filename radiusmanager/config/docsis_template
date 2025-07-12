@@ -1,0 +1,24 @@
+Main 
+{
+    NetworkAccess 1;
+    GlobalPrivacyEnable 0;
+    MaxCPE 1;
+
+    DsServiceFlow
+    {
+	DsServiceFlowRef 1;
+        QosParamSetType 7;
+        {MAXRATEDS}
+    }
+
+    UsServiceFlow
+    {
+    	UsServiceFlowRef 2;
+	QosParamSetType 7;
+        {MAXRATEUS}
+    }
+
+
+    GenericTLV TlvCode 53 TlvLength 48 TlvValue 0x01067075626c69630210010600000000000002060000000000000301010411646f637369734d616e6167657256696577;
+    GenericTLV TlvCode 53 TlvLength 49 TlvValue 0x0107707269766174650210010600000000000002060000000000000301020411646f637369734d616e6167657256696577;
+}

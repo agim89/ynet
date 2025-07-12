@@ -1,0 +1,60 @@
+ 
+<link rel="stylesheet" href="styles.css" type="text/css">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{SELPM0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#D3D9E6">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="5" cellspacing="0" class="tb-bg">
+        <tr> 
+          <td>
+          <TD > <form name="form1" action="user.php?cont=make_payment" method="post" >
+              <div {HIDEUCP}>
+			  <p class="title3">{SELPM1}</p>
+              <p class="title2">&nbsp;</p>
+              <table border="0" align="center" cellpadding="2" cellspacing="0">
+                <tr> 
+                  <td class="normal"><div align="right">{SELPM2}:</div></td>
+                  <td class="normal"><strong>{SRVNAME}</strong></td>
+                </tr>
+                <tr> 
+                  <td class="normal"><div align="right">{SELPM3}:</div></td>
+                  <td class="normal"><strong>{AMOUNTSTR}</strong></td>
+                </tr>
+                <tr> 
+                  <td class="normal"><div align="right">{SELPM4}:</div></td>
+                  <td class="normal"><strong>{TOTALPRICESTR} {CURRENCY}</strong></td>
+                </tr>
+              </table>
+			  </div>
+              <p class="title3">&nbsp;</p>
+              <p class="title3">{SELPM6}</p>
+              <p class="title3">&nbsp;</p>
+              <div align="center">{PAYMODES}</div>
+              <p align="center" class="normal">
+                 
+                 
+              </p>
+              <p align="center" class="normal"> 
+                <input type="submit" name="Submit" id="submit" value="{SELPM5}">
+                <script language="JavaScript" src="scripts/helper.js" type="text/JavaScript">
+</script>
+              </p>
+              </form> </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

@@ -1,0 +1,98 @@
+ 
+<link rel="stylesheet" href="styles.css" type="text/css">
+<form name="form1" action="passwd.php?cont=sendpsw" method="post" >
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+              <tr> 
+                <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+                    <tr> 
+                      <td class="modtext"><p>{PASSWDREC0}</p>
+                        </td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td><img src="images/spacer.gif" width="1" height="2"></td>
+        </tr>
+      </table></td>
+    <td><table border="0" align="right" cellpadding="3" cellspacing="0">
+        <tr class="normal"> 
+          <td><div align="right">{PASSWDREC8}:</div></td>
+          <td><select name="lang" class="normal" id="lang" onChange="change_lang()">
+        {LANGLIST}
+            </select></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#D3D9E6">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="5" cellspacing="0" class="tb-bg">
+        <tr> 
+          <td>
+          <TD > 
+              <p class="title3"><font color="#FF0000">{ERROR}</font></p>
+              <table border="0" align="center" cellpadding="2" cellspacing="2">
+                <tr>
+                  <td class="normal"><div align="right"><font color="#FF0000">*</font> 
+                      {PASSWDREC9}:</div></td>
+                  <td class="normal"><input name="username" type="text" class="normal" id="username" value="{USERNAME}" size="32" maxlength="32"></td>
+                </tr>
+                <tr> 
+                  <td class="normal"><div align="right">{PASSWDREC1}:</div></td>
+                  <td class="normal"><input name="mode" type="radio" value="0" {CHKEMAIL}>
+                    {PASSWDREC2} <br> <input type="radio" name="mode" value="1" {CHKSMS}>
+                    {PASSWDREC3} </td>
+                </tr>
+                <tr> 
+                  <td class="normal"><div align="right">{PASSWDREC4}:</div></td>
+                  <td class="normal"><input name="email" type="text" class="normal" id="email" value="{EMAIL}" size="40" maxlength="50"></td>
+                </tr>
+                <tr> 
+                  <td class="normal"><div align="right">{PASSWDREC5}:</div></td>
+                  <td class="normal"><input name="mobile" type="text" class="normal" id="mobile" value="{MOBILE}" size="15" maxlength="15">
+                    ({PASSWDREC6}) </td>
+                </tr>
+              </table>
+              <p align="center" class="normal"><font color="#FF0000">*</font> 
+                {PASSWDREC10} </p>
+              <p align="center" class="normal"> 
+                <input type="submit" name="Submit" id="submit" value="{PASSWDREC7}">
+                <script language="JavaScript" type="text/JavaScript">
+focusField("username");
+function focusField(name) {
+  for(var i = 0; i < document.forms.length; ++i) {
+    var obj = document.forms[i].elements[name];
+    if (obj) {
+      if (obj.length) { obj = obj[0]; }
+      if (obj.focus) { obj.focus(); }
+    }
+  }
+} 
+</script>
+                <script language="JavaScript" type="text/JavaScript">
+function change_lang()
+{
+  len = document.form1.lang.length;
+
+  for (i = 0; i < len; i++) 
+  {
+    if (document.form1.lang[i].selected)
+      lang = document.form1.lang[i].text;
+  }
+  window.location="passwd.php?cont=change_lang&lang=" + lang;
+}
+
+</script>
+              </p>
+              </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</form> 

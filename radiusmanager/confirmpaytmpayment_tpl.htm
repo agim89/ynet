@@ -1,0 +1,55 @@
+<link href="styles.css" rel="stylesheet" type="text/css">  
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{PAYPAYTM0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="5" cellspacing="0" class="tb-bg">
+  <tr> 
+    <td><form method="POST" action="{URL}" onSubmit="document.getElementById('submit').disabled=true;">
+        <table align="center" cellpadding="2" cellspacing="2">
+          <tr class="normal"> 
+            <td colspan="2" class="title3">{PAYPAYTM1}<br> <br>
+              <input name="MID" type="hidden" id="MID" value="{MID}">
+              <input name="ORDER_ID" type="hidden" id="ORDER_ID" value="{ORDERID}">
+              <input name="CUST_ID" type="hidden" id="CUST_ID" value="{CUSTID}">
+              <input name="INDUSTRY_TYPE_ID" type="hidden" id="INDUSTRY_TYPE_ID" value="{INDUSTRYTYPEID}">
+              <input name="CHANNEL_ID" type="hidden" id="CHANNEL_ID" value="{CHANNELID}">
+              <input name="TXN_AMOUNT" type="hidden" id="TXN_AMOUNT" value="{TXNAMOUNT}"> 
+              <input name="WEBSITE" type="hidden" id="WEBSITE" value="{WEBSITE}">
+              <input name="CALLBACK_URL" type="hidden" id="CALLBACK_URL" value="{CALLBACKURL}"></td>
+              <input name="CHECKSUMHASH" type="hidden" id="CHECKSUMHASH" value="{CHECKSUMHASH}">
+          </tr>
+          <tr class="normal"> 
+            <td> <div align="right">{PAYPAYTM2}:</div></td>
+            <td align=left><strong>{PRODNAME}</strong></td>
+          </tr>
+          <tr class="normal"> 
+            <td> <div align="right">{PAYPAYTM3}:</div></td>
+            <td align=left><strong>{QTY}</strong></td>
+          </tr>
+          <tr class="normal"> 
+            <td> <div align="right">{PAYPAYTM4}:</div></td>
+            <td align=left><strong>{STRPRICE} {CURRENCY} </strong></td>
+          </tr>
+          <tr class="normal"> 
+            <td colspan="2"><div align="center"><br>
+                <input name="submit" type="submit" id="submit" value="{PAYPAYTM5}">
+              </div></td>
+          </tr>
+        </table>
+        </form>
+      </td>
+  </tr>
+</table>

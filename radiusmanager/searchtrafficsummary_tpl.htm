@@ -1,0 +1,74 @@
+<link href="styles.css" rel="stylesheet" type="text/css"> 
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{TRFSUMFLTR0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#D3D9E6" class="tb-bdr">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="5" cellspacing="0" class="tb-bg">
+        <tr> 
+          <td> <form name="form1" action="admin.php?cont=traffic_summary" method="post" onSubmit="return submitList()">
+              <p class="title2"><font color="#FF0000">{ERROR}</font> </p>
+              <table border="0" align="center" cellpadding="2" cellspacing="2">
+                <tr> 
+                  <td nowrap class="normal"><div align="right">{TRFSUMFLTR1}:</div></td>
+                  <td class="normal"><input name="fromdate" type="text" class="normal" id="fromdate" value="{FROMDATE}" size="10" maxlength="10"> 
+                    <span class="normal"> <A NAME="anchor1" ID="anchor1"><img src="images/cal.gif" width="16" height="15"
+			  onClick="cal.select(document.forms['form1'].fromdate,'anchor1','yyyy-MM-dd'); return false;"></A> 
+                    ({TRFSUMFLTR4})</span></td>
+                </tr>
+                <tr> 
+                  <td nowrap class="normal"><div align="right">{TRFSUMFLTR2}:</div></td>
+                  <td class="normal"><input name="todate" type="text" class="normal" id="todate" value="{TODATE}" size="10" maxlength="10"> 
+                    <span class="normal"> <A NAME="anchor2" ID="anchor2"><img src="images/cal.gif" width="16" height="15"
+			  onClick="cal.select(document.forms['form1'].todate,'anchor2','yyyy-MM-dd'); return false;"></A> 
+                    ({TRFSUMFLTR4}) </span> <DIV ID="div1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+                    <SCRIPT LANGUAGE="JavaScript" SRC="scripts/calendarpopup.js"></SCRIPT> 
+                    <SCRIPT LANGUAGE="JavaScript">
+var cal = new CalendarPopup("div1");
+document.write(getCalendarStyles());
+</SCRIPT></td>
+                </tr>
+                <tr> 
+                  <td nowrap class="normal"><div align="right">{TRFSUMFLTR5}:</div></td>
+                  <td class="normal"><select name="nasid" class="normal" id="nasid"> {NASLIST}
+                    </select></td>
+                </tr>
+                <tr> 
+                  <td nowrap class="normal"><div align="right">{TRFSUMFLTR6}:</div></td>
+                  <td class="normal"><select name="apid" class="normal" id="apid"> {APLIST}
+                    </select></td>
+                </tr>
+              </table>
+              <p align="center" class="normal"> 
+                <input type="submit" name="Submit" value="{TRFSUMFLTR3}" {SEARCHSTATE}>
+<SCRIPT type=text/javascript><!--
+focusField("fromdate");
+function focusField(name) {
+  for(var i = 0; i < document.forms.length; ++i) {
+    var obj = document.forms[i].elements[name];
+    if (obj) {
+      if (obj.length) { obj = obj[0]; }
+      if (obj.focus) { obj.focus(); }
+    }
+  }
+}
+//--> </SCRIPT>
+              </p>
+              </form></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
