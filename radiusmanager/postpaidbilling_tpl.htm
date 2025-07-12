@@ -1,0 +1,75 @@
+<link href="styles.css" rel="stylesheet" type="text/css"> 
+  
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{POSTPBILL0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="5" cellspacing="0" class="tb-bg">
+  <tr> 
+    <td class="title3"><form name="form1" method="post" action="admin.php?cont=confirm_postpaid_billing"">
+        <p><font color="#FF0000">{ERROR}</font></p>
+        <table border="0" align="center" cellpadding="2" cellspacing="2">
+          <tr class="normal"> 
+            <td><div align="right">{POSTPBILL1}:</div></td>
+            <td><strong>{USERNAME}</strong></td>
+          </tr>
+          <tr class="normal"> 
+            <td><div align="right">{POSTPBILL2}:</div></td>
+            <td><input name="fromdate" type="text" class="normal" id="fromdate" value="{FROMDATE}" size="10" maxlength="10">
+              <span class="normal"> <A NAME="anchor1" ID="anchor1"><img src="images/cal.gif" width="16" height="15"
+			  onClick="cal.select(document.forms['form1'].fromdate,'anchor1','yyyy-MM-dd'); return false;"></A> 
+              ({POSTPBILL8})</span> </td>
+          </tr>
+          <tr class="normal"> 
+            <td><div align="right">{POSTPBILL3}:</div></td>
+            <td> <input name="todate" type="text" class="normal" id="todate" value="{TODATE}" size="10" maxlength="10">
+              <span class="normal"> <A NAME="anchor2" ID="anchor2"><img src="images/cal.gif" width="16" height="15"
+			  onClick="cal.select(document.forms['form1'].todate,'anchor2','yyyy-MM-dd'); return false;"></A> 
+              ({POSTPBILL8})</span> </td>
+          </tr>
+          <tr class="normal"> 
+            <td colspan="2">&nbsp;</td>
+          </tr>
+          <tr class="normal"> 
+            <td colspan="2"><div align="center"> 
+                <input name="Submit" type="submit" id="Submit3" value="{POSTPBILL5}">
+                <input name="username" type="hidden" id="username" value="{USERNAME}">
+                <DIV ID="div1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+                <SCRIPT LANGUAGE="JavaScript" SRC="scripts/calendarpopup.js"></SCRIPT>
+                <SCRIPT LANGUAGE="JavaScript">
+var cal = new CalendarPopup("div1");
+document.write(getCalendarStyles());
+focusField("fromdate");
+function focusField(name) {
+  for(var i = 0; i < document.forms.length; ++i) {
+    var obj = document.forms[i].elements[name];
+    if (obj) {
+      if (obj.length) { obj = obj[0]; }
+      if (obj.focus) { obj.focus(); }
+    }
+  }
+} 
+</SCRIPT>
+              </div></td>
+          </tr>
+        </table>
+        <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+        </form></td>
+  </tr>
+</table>

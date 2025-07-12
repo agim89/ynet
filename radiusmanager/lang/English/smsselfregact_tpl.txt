@@ -1,0 +1,5 @@
+Account activation code is {ACTCODE}
+
+
+Available tags:
+ACTCODE - activation code

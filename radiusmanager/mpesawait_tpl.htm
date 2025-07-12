@@ -1,0 +1,24 @@
+<link href="styles.css" rel="stylesheet" type="text/css">  
+<div align="center">
+  <img src="images/loading.gif" width="441" height="291"><br>
+  <p class="title3">{WAITMPESA0}</p>
+  <br>
+  <br>
+</div>
+<script language="JavaScript" type="text/JavaScript">
+	checkOrder();
+	setInterval(function() {checkOrder()}, 3000);
+
+function checkOrder()
+{
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.open("GET", "mpesa_processorder.php?merchantrequestid={MERCHANTREQUESTID}", true);
+	xmlHttp.send(null);
+	xmlHttp.onload = function (e)
+	{
+		var res = JSON.parse(xmlHttp.responseText);
+		if (res[0] == 1)
+			location.replace(res[1])
+	}
+}
+</script>

@@ -1,0 +1,58 @@
+ 
+<link rel="stylesheet" href="styles.css" type="text/css">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{ACTACCEMAIL0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#D3D9E6" class="tb-bdr">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="5" cellspacing="0" class="tb-bg">
+        <tr> 
+          <td><form name="form1" action="reg.php?cont=selfreg_actemail" method="post">
+              <p align="center" class="title3">&nbsp;</p>
+              <p align="center" class="title3"><font color="#FF0000">{ERROR}</font></p>
+              <p align="center" class="title3">&nbsp;</p>
+              <p align="center" class="title3">{ACTACCEMAIL1}</p>
+              <p class="title2">&nbsp;</p>
+              <table border="0" align="center" cellpadding="2" cellspacing="2">
+                <tr> 
+                  <td nowrap class="normal"><div align="right"> <font color="#FF0000">*</font> 
+                      {ACTACCEMAIL2}: </div></td>
+                  <td class="normal"><input name="actcode" type="text" class="normal" id="actcode" size="20" maxlength="20">
+                  </td>
+                </tr>
+              </table>
+              <p align="center" class="normal"> <font color="#FF0000">*</font> 
+                {ACTACCEMAIL3}</p>
+              <p align="center" class="normal"> 
+                <input name="submit" type="submit" id="submit" value="{ACTACCEMAIL4}">
+                <SCRIPT type=text/javascript><!--
+focusField("actcode");
+function focusField(name) {
+  for(var i = 0; i < document.forms.length; ++i) {
+    var obj = document.forms[i].elements[name];
+    if (obj) {
+      if (obj.length) { obj = obj[0]; }
+      if (obj.focus) { obj.focus(); }
+    }
+  }
+} 
+//--> </SCRIPT>
+              </p>
+            </form></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

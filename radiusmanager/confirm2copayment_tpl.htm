@@ -1,0 +1,66 @@
+<link href="styles.css" rel="stylesheet" type="text/css">  
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{PAY2CO0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="5" cellspacing="0" class="tb-bg">
+  <tr> 
+    <td><form method="POST" action="https://www.2checkout.com/checkout/purchase">
+        <table align="center" cellpadding="2" cellspacing="2">
+          <tr class="normal"> 
+            <td colspan="2" class="title3">{PAY2CO1}<br> <br> <input type="hidden" name="sid" value="{SID}"> 
+              <input type="hidden" name="c_prod_1" value="1,{QTY}" />
+              <input type="hidden" name="c_name_1" value="{PRODNAME}" /> 
+              <input type="hidden" name="c_description_1" value="{PRODDESCR}" /> 
+              <input type="hidden" name="c_price_1" value="{PRICE}" />
+              <input type="hidden" name="total" value="{TOTAL}"/> 
+              <input type="hidden" name="cart_order_id" value="{INDEX}" />
+              <input type="hidden" name="skip_landing" value="{SKIPLANDING}" /> 
+              <input type="hidden" name="id_type" value="1" />
+              <input type="hidden" name="first_name" value="{FIRSTNAME}" /> 
+              <input type="hidden" name="last_name" value="{LASTNAME}" />
+              <input type="hidden" name="street_address" value="{ADDRESS}" /> 
+              <input type="hidden" name="city" value="{CITY}" />
+              <input type="hidden" name="zip" value="{ZIP}" /> 
+              <input type="hidden" name="country" value="{COUNTRY}" />
+              <input type="hidden" name="state" value="{STATE}" /> 
+              <input type="hidden" name="phone" value="{PHONE}" />
+              <input type="hidden" name="email" value="{EMAIL}" />
+              <input type="hidden" name="merchant_order_id" value="{TRANSID}" />
+              <input type="hidden" name="demo" value="{DEMO}" id="demo" />
+            </td>
+          </tr>
+          <tr class="normal"> 
+            <td><div align="right">{PAY2CO2}:</div></td>
+            <td align=left><strong>{PRODNAME}</strong></td>
+          </tr>
+          <tr class="normal"> 
+            <td><div align="right">{PAY2CO3}:</div></td>
+            <td align=left><strong>{QTY}</strong></td>
+          </tr>
+          <tr class="normal"> 
+            <td> <div align="right">{PAY2CO4}:</div></td>
+            <td align=left><strong>{STRPRICE} {CURRENCY} </strong></td>
+          </tr>
+          <tr class="normal"> 
+            <td colspan="2"><div align="center"><br>
+                <input type="submit" name="Submit" id="Submit" value="{PAY2CO5}">
+              </div></td>
+          </tr>
+        </table>
+        </form>
+      </td>
+  </tr>
+</table>

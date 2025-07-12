@@ -1,0 +1,56 @@
+ 
+<link rel="stylesheet" href="styles.css" type="text/css">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{RVKCARD0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#D3D9E6" class="tb-bdr">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="5" cellspacing="0" class="tb-bg">
+        <tr> 
+          <td><form name="form1" method="post" action="admin.php?cont=revoke_card" onSubmit="return ConfirmMsg('{RVKCARD4}')">
+              <div align="center"> 
+                <p class="title3"><font color="#FF0000">{ERROR}</font></p>
+                <table border="0" align="center" cellpadding="2" cellspacing="2">
+                  <tr> 
+                    <td nowrap class="normal"><div align="right"> <font color="#FF0000">*</font> 
+                        {RVKCARD1}: </div></td>
+                    <td class="normal"><input name="cardnum" type="text" class="normal" id="cardnum" size="20" maxlength="20"> 
+                    </td>
+                  </tr>
+                </table>
+                <p class="normal"><font color="#FF0000">*</font> {RVKCARD2}</p>
+                <p class="normal"> 
+                  <input name="revoke" type="submit" id="AddMb2" value="{RVKCARD3}">
+                  <SCRIPT type=text/javascript><!--
+focusField("cardnum");
+function focusField(name) {
+  for(var i = 0; i < document.forms.length; ++i) {
+    var obj = document.forms[i].elements[name];
+    if (obj) {
+      if (obj.length) { obj = obj[0]; }
+      if (obj.focus) { obj.focus(); }
+    }
+  }
+} 
+//--> </SCRIPT>
+                  <script language="JavaScript" src="scripts/helper.js" type="text/JavaScript"></script>
+                </p>
+                </div>
+            </form></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

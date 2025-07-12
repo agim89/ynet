@@ -1,0 +1,136 @@
+<link href="styles.css" rel="stylesheet" type="text/css"> 
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{CFMCARDGEN0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="5" cellspacing="0" class="tb-bg">
+  <tr> 
+    <td class="title3"><form name="form1" method="post" action="admin.php?cont=makecards" onSubmit="document.getElementById('submit').disabled=true;">
+        <div align="center"> 
+          <p class="normal">&nbsp;</p>
+          <p class="normal"><img src="images/icon-exclamation.gif"></p>
+          <p class="title3">{CFMCARDGEN1}<font color="#FF0000"> {QUANTITY}</font> 
+            {CFMCARDGEN2}</p>
+          <p class="title3">&nbsp;</p>
+          <table border="0" align="center" cellpadding="2" cellspacing="0">
+            <tr class="normal"> 
+              <td colspan="2" class="title2">{CFMCARDGEN3}</td>
+            </tr>
+            <tr class="normal"> 
+              <td class="title2">&nbsp;</td>
+              <td class="title2">&nbsp;</td>
+            </tr>
+            <tr class="normal"> 
+              <td><div align="right">{CFMCARDGEN4}:</div></td>
+              <td><strong>{STRCARDTYPE}</strong></td>
+            </tr>
+            <tr class="normal"> 
+              <td><div align="right">{CFMCARDGEN5}:</div></td>
+              <td><strong>{VALUE} {CURRENCY}</strong></td>
+            </tr>
+            <tr class="normal"> 
+              <td><div align="right">{CFMCARDGEN6}:</div></td>
+              <td><strong>{EXPIRATION}</strong></td>
+            </tr>
+            <tr class="normal"> 
+              <td><div align="right">{CFMCARDGEN17}:</div></td>
+              <td><strong>{STRGROUPNAME}</strong></td>
+            </tr>
+            <tr class="normal"> 
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr class="normal"> 
+              <td colspan="2" class="title2">{CFMCARDGEN7}</td>
+            </tr>
+            <tr class="normal"> 
+              <td class="title2">&nbsp;</td>
+              <td class="title2">&nbsp;</td>
+            </tr>
+            <tr class="normal"> 
+              <td><div align="right">{CFMCARDGEN8}:</div></td>
+              <td><strong>{STRSRVNAME}</strong></td>
+            </tr>
+            <tr class="normal"> 
+              <td><div align="right">{CFMCARDGEN9}:</div></td>
+              <td><strong>{STRDOWNLIMIT}</strong></td>
+            </tr>
+            <tr class="normal"> 
+              <td><div align="right">{CFMCARDGEN10}:</div></td>
+              <td><strong>{STRUPLIMIT}</strong></td>
+            </tr>
+            <tr class="normal"> 
+              <td><div align="right">{CFMCARDGEN16}:</div></td>
+              <td><strong>{STRCOMBLIMIT}</strong></td>
+            </tr>
+            <tr class="normal"> 
+              <td><div align="right">{CFMCARDGEN11}:</div></td>
+              <td><strong>{STRUPTIMELIMIT} </strong></td>
+            </tr>
+            <tr class="normal"> 
+              <td><div align="right">{CFMCARDGEN12}:</div></td>
+              <td><strong>{STREXPIREDATE}</strong></td>
+            </tr>
+          </table>
+          <p class="title3">&nbsp;</p>
+          <p class="title3">
+            <input name="generate" type="submit" id="submit" value="{CFMCARDGEN14}" onClick="showProgress()">
+            <input name="quantity" type="hidden" id="quantity" value="{QUANTITY}">
+            <input name="secret" type="hidden" id="secret" value="{SECRET}">
+            <input name="value" type="hidden" id="value" value="{VALUE}">
+            <input name="expiration" type="hidden" id="expiration" value="{EXPIRATION}">
+            <input name="cardtype" type="hidden" id="cardtype" value="{CARDTYPE}">
+            <input name="groupid" type="hidden" id="groupid" value="{GROUPID}">
+            <input name="srvid" type="hidden" id="srvid" value="{SRVID}">
+            <input name="downlimit" type="hidden" id="downlimit" value="{DOWNLIMIT}">
+            <input name="uplimit" type="hidden" id="uplimit" value="{UPLIMIT}">
+            <input name="comblimit" type="hidden" id="comblimit" value="{COMBLIMIT}">
+            <input name="uptimelimit" type="hidden" id="uptimelimit" value="{UPTIMELIMIT}">
+            <input name="timebaseonline" type="hidden" id="timebaseonline" value="{TIMEBASEONLINE}">
+            <input name="transid" type="hidden" id="transid" value="{TRANSID}">
+            <input name="expiremode" type="hidden" id="expiremode" value="{EXPIREMODE}">
+            <input name="expiretime" type="hidden" id="expiretime" value="{EXPIRETIME}">
+            <input name="timebaseexp" type="hidden" id="timebaseexp" value="{TIMEBASEEXP}">
+            <input name="reqverify" type="hidden" id="reqverify" value="{REQVERIFY}">
+            <input name="pinlength" type="hidden" id="pinlength" value="{PINLENGTH}">
+            <input name="pswlength" type="hidden" id="pswlength" value="{PSWLENGTH}">
+            <input name="simuse" type="hidden" id="simuse" value="{SIMUSE}">
+            <input name="prefix" type="hidden" id="prefix" value="{PREFIX}">
+          </p>
+          <progress id='progress' value="0" max='100' style="display: none"></progress>  
+          </div>
+      </form>
+    </td>
+  </tr>
+</table>
+<script>
+function getProgress()
+{
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open("GET", "getcardprogress.php", true);
+  xmlHttp.send(null);
+  xmlHttp.onload = function (e)
+  {
+    document.getElementById("progress").value = xmlHttp.responseText;
+  }
+}
+
+function showProgress()
+{
+  setInterval(function() {getProgress()}, 1000);	
+  var el = document.getElementById("progress");
+el.style.display = "block";
+}
+</script>

@@ -1,0 +1,693 @@
+ 
+<link rel="stylesheet" href="styles.css" type="text/css">
+<link rel="stylesheet" href="viewer/viewer.css">
+<link rel="stylesheet" href="viewer/main.css">
+<script src="viewer/viewer.js"></script> 
+<script src="viewer/main.js"></script>
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{NEWUSR0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#D3D9E6" class="tb-bdr">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="5" cellspacing="0" class="tb-bg">
+        <tr> 
+          <td><form name="form1" action="admin.php?cont=store_user" method="post" enctype="multipart/form-data">
+              <p align="center" class="title3"><font color="#FF0000">{ERROR}</font></p>
+              <table border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr> 
+                  <td valign="top"><table border="0" align="center" cellpadding="2" cellspacing="2">
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"> <font color="#FF0000">*</font> 
+                            {NEWUSR2}: </div></td>
+                        <td class="normal"><input name="username" type="text" class="normal" id="username2" value="{USERNAME}" size="32" maxlength="32">
+                          {NEWUSR26}</td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWUSR3}:</div></td>
+                        <td class="normal"><strong> 
+                          <input name="enableuser" type="checkbox" id="enableuser3" value="1" {CHECKEDENUSER}>
+                          </strong></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWUSR4}:</div></td>
+                        <td class="normal"><strong> </strong> <input type="radio" name="acctype" value="0" {CHKREGULAR} onClick="setAccType()">
+                          {NEWUSR27}<br> <input type="radio" name="acctype" value="1" {CHKMACONLY} onClick="setAccType()">
+                          {NEWUSR28}<br> <input type="radio" name="acctype" value="6" {CHKCM} onClick="setAccType()" {EN_DOCSIS}>
+                          {NEWUSR31} <br> <input type="radio" name="acctype" value="3" {CHKACLMIKROTIK} onClick="setAccType()">
+                          {NEWUSR37}<br> <input type="radio" name="acctype" value="4" {CHKACLSTAROS} onClick="setAccType()">
+                          {NEWUSR38} </td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"><font color="#FF0000">*</font> 
+                            {NEWUSR5}:</div></td>
+                        <td class="normal"><input name="password1" type="password" class="normal" id="password1" value="{PASSWORD1}" maxlength="32" size="18">
+                          {NEWUSR29} 
+                          <script language="JavaScript" type="text/JavaScript">
+function showPsw()
+{
+	if (document.form1.showpsw.checked)
+	{
+		document.form1.password1.type = 'text';
+		document.form1.password2.type = 'text';
+	}
+	else
+	{
+		document.form1.password1.type = 'password';
+		document.form1.password2.type = 'password';
+	}
+}						  
+
+function genPsw()
+{
+    var length = 8,
+        charset = "{PSWCHARS}",
+        newPsw = "";
+    for (var i = 0, n = charset.length; i < length; ++i)
+        newPsw += charset.charAt(Math.floor(Math.random() * n));
+
+	document.form1.password1.value = newPsw;
+	document.form1.password2.value = newPsw;
+	document.form1.password1.disabled = false;
+	document.form1.password2.disabled = false;
+	document.form1.password1.type = 'text';
+	document.form1.password2.type = 'text';
+	document.form1.showpsw.checked = true;
+}
+
+</script></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"><font color="#FF0000">*</font> 
+                            {NEWUSR6}:</div></td>
+                        <td class="normal"><input name="password2" type="password" class="normal" id="password2" value="{PASSWORD2}" maxlength="32" size="18">
+                          {NEWUSR29} </td>
+                      </tr>
+                      <tr> 
+                        <td colspan="2" nowrap class="normal"><table width="10%" border="0" align="center" cellpadding="1" cellspacing="0">
+                            <tr class="normal"> 
+                              <td nowrap><input name="showpsw" type="checkbox" id="showpsw2" value="1" onClick="showPsw()">
+                                {NEWUSR56}<strong></strong></td>
+                              <td nowrap><img src="images/spacer.gif" width="10" height="1"></td>
+                              <td nowrap><input type="button" name="genpsw" value="{NEWUSR57}" onClick="genPsw()"> 
+                              </td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWUSR61}:</div></td>
+                        <td nowrap class="normal"><p> 
+                            <input type="radio" name="macpswmode" value="0" {CHKMACPSWMODE0} {EN_MACPSWMODE}>
+                            {NEWUSR62}<br>
+                            <input type="radio" name="macpswmode" value="1" {CHKMACPSWMODE1} {EN_MACPSWMODE}>
+                            {NEWUSR63}<br>
+                            <input type="radio" name="macpswmode" value="2" {CHKMACPSWMODE2} {EN_MACPSWMODE}>
+                            {NEWUSR64}</p></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWUSR24}:</div></td>
+                        <td nowrap class="normal"><input name="maccm" type="text" class="normal" id="maccm" maxlength="17" value="{MACCM}" size="18" {ENMACCM}> 
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWUSR47}:</div></td>
+                        <td nowrap class="normal"><table width="20%%" border="0" cellspacing="2" cellpadding="0">
+                            <tr class="normal"> 
+                              <td nowrap><input type="radio" name="ipmodecm" value="1" {CHKIPMODECMRADIUS} onClick="setIPModeCM()">
+                                {NEWUSR50}</td>
+                              <td nowrap>&nbsp;</td>
+                              <td nowrap><strong> 
+                                <select name="poolidcm" class="normal" id="select"> {IPPOOLLISTCM}
+                                </select>
+                                </strong></td>
+                            </tr>
+                            <tr class="normal"> 
+                              <td nowrap><input type="radio" name="ipmodecm" value="2" {CHKIPMODECMSTATIC} onClick="setIPModeCM()"> 
+                                <strong></strong>{NEWUSR8}</td>
+                              <td nowrap>&nbsp;</td>
+                              <td nowrap><input name="staticipcm" type="text" class="normal" id="staticipcm" value="{STATICIPCM}" maxlength="15" size="15" {EN_STATICIPCM}></td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"> {NEWUSR7}:</div></td>
+                        <td nowrap class="normal"><input name="mac" type="text" class="normal" id="mac" maxlength="17" value="{MAC}" size="18"> 
+                          <strong> 
+                          <input name="usemacauth" type="checkbox" id="usemacauth" value="1" {CHECKEDUSEMACAUTH}>
+                          </strong>{NEWUSR30}</td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWUSR48}:</div></td>
+                        <td class="normal"><table width="20%%" border="0" cellpadding="0" cellspacing="2">
+                            <tr class="normal"> 
+                              <td nowrap><input type="radio" name="ipmodecpe" value="0" {CHKIPMODECPENAS} onClick="setIPModeCPE()">
+                                {NEWUSR49}</td>
+                              <td nowrap>&nbsp;</td>
+                              <td nowrap>&nbsp;</td>
+                            </tr>
+                            <tr class="normal"> 
+                              <td nowrap><input type="radio" name="ipmodecpe" value="1" {CHKIPMODECPERADIUS} onClick="setIPModeCPE()">
+                                {NEWUSR50}</td>
+                              <td nowrap>&nbsp;</td>
+                              <td nowrap><strong> 
+                                <select name="poolidcpe" class="normal" id="poolidcpe"> {IPPOOLLISTCPE}
+                                </select>
+                                </strong></td>
+                            </tr>
+                            <tr class="normal"> 
+                              <td nowrap><input type="radio" name="ipmodecpe" value="2" {CHKIPMODECPESTATIC} onClick="setIPModeCPE()"> 
+                                <strong></strong>{NEWUSR8}</td>
+                              <td nowrap>&nbsp;</td>
+                              <td nowrap><input name="staticipcpe" type="text" class="normal" id="staticipcpe" value="{STATICIPCPE}" maxlength="15" size="15" {EN_STATICIPCPE}></td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWUSR9}:</div></td>
+                        <td class="normal"><input name="simuse" type="text" class="normal" id="simuse" value="{SIMUSE}" maxlength="4" size="4" {EN_SIMUSE}></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"><font color="#FF0000">{STARFIRSTNAME}</font> 
+                            {NEWUSR40}:</div></td>
+                        <td class="normal"><input name="firstname" type="text" class="normal" id="firstname" value="{FIRSTNAME}" maxlength="50" size="50"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"><font color="#FF0000">{STARLASTNAME}</font> 
+                            {NEWUSR41}:</div></td>
+                        <td class="normal"><input name="lastname" type="text" class="normal" id="lastname" value="{LASTNAME}" maxlength="50" size="50"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWUSR10}:</div></td>
+                        <td class="normal"><input name="company" type="text" class="normal" id="company" value="{COMPANY}" maxlength="50" size="50"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"><font color="#FF0000">{STARADDRESS}</font> 
+                            {NEWUSR11}:</div></td>
+                        <td class="normal"><input name="address" type="text" class="normal" id="address" value="{ADDRESS}" maxlength="100" size="50"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"><font color="#FF0000">{STARCITY}</font> 
+                            {NEWUSR12}:</div></td>
+                        <td nowrap class="normal"><input name="city" type="text" class="normal" id="city" value="{CITY}" maxlength="50" size="30">
+                          &nbsp;&nbsp;&nbsp;<font color="#FF0000">{STARZIP}</font> 
+                          {NEWUSR13}: 
+                          <input name="zip" type="text" class="normal" id="zip" value="{ZIP}" maxlength="8" size="8"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"><font color="#FF0000">{STARCOUNTRY}</font> 
+                            {NEWUSR42}:</div></td>
+                        <td class="normal"><strong> 
+                          <select name="country" class="normal" id="country"> {COUNTRYLIST}
+                          
+                          </select>
+                          </strong></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"><font color="#FF0000">{STARSTATE}</font> 
+                            {NEWUSR43}:</div></td>
+                        <td class="normal"><select name="state" class="normal" id="select5"> {STATESLIST}
+                           
+                          
+                          </select> </td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"><font color="#FF0000">{STARPHONE}</font> 
+                            {NEWUSR14}:</div></td>
+                        <td class="normal"><input name="phone" type="text" class="normal" id="phone" value="{PHONE}" maxlength="15" size="15"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"><font color="#FF0000">{STARMOBILE}</font> 
+                            {NEWUSR15}:</div></td>
+                        <td class="normal"><input name="mobile" type="text" class="normal" id="mobile" value="{MOBILE}" maxlength="15" size="15"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"><font color="#FF0000">{STAREMAIL}</font> 
+                            {NEWUSR25}:</div></td>
+                        <td class="normal"><input name="email" type="text" class="normal" id="email" value="{EMAIL}" maxlength="100" size="50"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right"><font color="#FF0000">{STARVATID}</font> 
+                            {NEWUSR16}:</div></td>
+                        <td class="normal"><input name="taxid" type="text" class="normal" id="taxid" value="{TAXID}" maxlength="40" size="40"></td>
+                      </tr>
+                    </table></td>
+                  <td valign="top" class="normal"> <table width="100%%" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td><table width="100%" border="0" align="center" cellpadding="2" cellspacing="2">
+                            <tr> 
+                              <td nowrap class="normal"><div align="right">{NEWUSR17}:</div></td>
+                              <td class="normal"><strong> 
+                                <select name="srvid" class="normal" id="srvid"> {SRVLIST}
+                          
+                                </select>
+                                </strong></td>
+                            </tr>
+                            <tr> 
+                              <td nowrap class="normal"><div align="right">{NEWUSR18}:</div></td>
+                              <td class="normal"><p> 
+                                  <input name="downlimit" type="text" class="normal" id="downlimit" value="{DOWNLIMIT}" maxlength="25" size="20" {EN_DOWNLIMIT}>
+                                  {NEWUSR32}</p></td>
+                            </tr>
+                            <tr> 
+                              <td nowrap class="normal"><div align="right">{NEWUSR19}:</div></td>
+                              <td class="normal"><input name="uplimit" type="text" class="normal" id="uplimit" value="{UPLIMIT}" maxlength="25" size="20" {EN_UPLIMIT}>
+                                {NEWUSR32}</td>
+                            </tr>
+                            <tr> 
+                              <td nowrap class="normal"><div align="right">{NEWUSR39}:</div></td>
+                              <td class="normal"><input name="comblimit" type="text" class="normal" id="comblimit" value="{COMBLIMIT}" maxlength="25" size="20" {EN_COMBLIMIT}>
+                                {NEWUSR32}</td>
+                            </tr>
+                            <tr> 
+                              <td nowrap class="normal"><div align="right">{NEWUSR20}:</div></td>
+                              <td class="normal"><p> 
+                                  <input name="expiration" type="text" class="normal" id="expiration" value="{EXPIRATION}" maxlength="10" size="10" {EN_EXPIRATION}>
+                                  <A NAME="anchor1" ID="anchor1"><img src="images/cal.gif" width="16" height="15"
+			  onClick="cal.select(document.forms['form1'].expiration,'anchor1','yyyy-MM-dd'); return false;"></A> 
+                                  ({NEWUSR33}) </p></td>
+                            </tr>
+                            <tr> 
+                              <td nowrap class="normal"><div align="right">{NEWUSR21}:</div></td>
+                              <td class="normal"><p> 
+                                  <input name="uptimelimit" type="text" class="normal" id="uptimelimit" value="{UPTIMELIMIT}" maxlength="20" size="20" {EN_UPTIMELIMIT}>
+                                  {NEWUSR34}</p></td>
+                            </tr>
+                            <tr> 
+                              <td nowrap class="normal"><div align="right">{NEWUSR44}:</div></td>
+                              <td class="normal"><input name="credits" type="text" class="normal" id="credits" value="{CREDITS}" maxlength="20" size="20" {EN_CREDITS}>
+                                {CURRENCY} </td>
+                            </tr>
+                            <tr> 
+                              <td nowrap class="normal"><div align="right">{NEWUSR51}:</div></td>
+                              <td class="normal"><input name="contractid" type="text" class="normal" id="contractid" value="{CONTRACTID}" maxlength="50" size="50" {EN_CONTRACTID}> 
+                              </td>
+                            </tr>
+                            <tr> 
+                              <td nowrap class="normal"><div align="right">{NEWUSR54}:</div></td>
+                              <td class="normal"><input name="contractvalid" type="text" class=normal id="contractvalid" value="{CONTRACTVALID}" maxlength="19" size="19" {EN_CONTRACTVALID}> 
+                                <A NAME="anchor2" ID="anchor2"><img src="images/cal.gif" width="16" height="15"
+			  onClick="cal.select(document.forms['form1'].contractvalid,'anchor2','yyyy-MM-dd'); return false;"></A> 
+                                ({EDUSR40}) </td>
+                            </tr>
+                            <tr> 
+                              <td nowrap class="normal"><div align="right">{NEWUSR52}:</div></td>
+                              <td nowrap class="normal"><input name="gpslat" type="text" class="normal" id="gpslat" value="{GPSLAT}" maxlength="19" size="22">
+                                {NEWUSR53} 
+                                <input name="gpslong" type="text" class="normal" id="gpslong2" value="{GPSLONG}" maxlength="19" size="22">
+                                {NEWUSR53} </td>
+                            </tr>
+                            <tr> 
+                              <td nowrap class="normal"><div align="right">{NEWUSR22}:</div></td>
+                              <td class="normal"><textarea name="comment" cols="55" rows="6" class="normal" id="textarea2" onKeyDown="CountLeft(this, 500);" onKeyUp="CountLeft(this, 500);" >{COMMENT}</textarea> 
+<SCRIPT LANGUAGE="JavaScript">
+function CountLeft(field, max)
+{
+  if (field.value.length > max)
+    field.value = field.value.substring(0, max);
+}
+ </script> <input name="superuser" type="hidden" id="superuser" value="{SUPERUSER}"> 
+                              </td>
+                            </tr>
+                            <tr> 
+                              <td nowrap class="normal"><div align="right">{NEWUSR55}:</div></td>
+                              <td nowrap class="normal"><strong> 
+                                <select name="lang" class="normal" id="lang"> {LANGLIST}
+                                </select>
+                                </strong></td>
+                            </tr>
+                            <tr> 
+                              <td nowrap class="normal"><div align="right">{NEWUSR45}:</div></td>
+                              <td nowrap class="normal"><select name="groupid" class="normal" id="groupid"> {GROUPLIST}
+                                        
+                                </select></td>
+                            </tr>
+                            <tr> 
+                              <td nowrap class="normal"><div align="right">{NEWUSR46}:</div></td>
+                              <td class="normal"><textarea name="custattr" cols="55" rows="5" class="normal" id="custattr">{CUSTATTR}</textarea></td>
+                            </tr>
+                            <tr> 
+                              <td nowrap class="normal"><div align="right">{NEWUSR58}:</div></td>
+                              <td class="normal"><input name="cnic" type="text" class=normal id="cnic" value="{CNIC}" maxlength="30" size="30"></td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr> 
+                        <td><SCRIPT LANGUAGE="JavaScript" SRC="scripts/calendarpopup.js"></SCRIPT> 
+<SCRIPT LANGUAGE="JavaScript">
+var cal = new CalendarPopup("div1");
+document.write(getCalendarStyles());
+</SCRIPT></DIV>
+						<div class="docs-pictures"> 
+                          <table border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#BAC9E4">
+                            <tr> 
+                              <td> <table width="100%" border="0" cellpadding="5" cellspacing="0" bgcolor="#CED9EC">
+                                  <tr> 
+                                    <td valign="bottom"><div align="center"> 
+                                        <table width="100%" border="0" cellpadding="2" cellspacing="0">
+                                          <tr> 
+                                            <td class="normal"><div align="center">{CNICIMG1}</div>
+                                              <div align="center"></div></td>
+                                          </tr>
+                                          <tr> 
+                                            <td class="normal"><div align="center">{NEWUSR59}</div></td>
+                                          </tr>
+                                        </table>
+                                      </div></td>
+                                    <td valign="bottom"><div align="center"> 
+                                        <table width="100%" border="0" cellpadding="2" cellspacing="0">
+                                          <tr> 
+                                            <td class="normal"><div align="center">{CNICIMG2}</div>
+                                              <div align="center"></div></td>
+                                          </tr>
+                                          <tr> 
+                                            <td class="normal"><div align="center">{NEWUSR60}</div></td>
+                                          </tr>
+                                        </table>
+                                      </div></td>
+                                  </tr>
+                                  <tr> 
+                                    <td><div align="center"> 
+                                        <input type="file" name="cnicfile1" id="cnicfile12">
+                                      </div></td>
+                                    <td><div align="center"> 
+                                        <input type="file" name="cnicfile2" id="cnicfile2">
+                                      </div></td>
+                                  </tr>
+                                </table></td>
+                            </tr>
+                          </table>
+						  </div> </td>
+                      </tr>
+                    </table>
+                    <div align="center"></div>
+                    
+                  </td>
+                </tr>
+              </table>
+              <p align="center" class="normal"> <font color="#FF0000">*</font> 
+                {NEWUSR35}</p>
+              <p align="center" class="normal"> 
+                <input name="adduser" type="submit" id="submit" value="{NEWUSR36}">
+                <SCRIPT type=text/javascript><!--
+focusField("username");
+function focusField(name) {
+  for(var i = 0; i < document.forms.length; ++i) {
+    var obj = document.forms[i].elements[name];
+    if (obj) {
+      if (obj.length) { obj = obj[0]; }
+      if (obj.focus) { obj.focus(); }
+    }
+  }
+} 
+//--> </SCRIPT>
+<script language="JavaScript" type="text/JavaScript">
+setAccType();
+if (document.form1.acctype[2].checked)
+  setIPModeCM();
+
+setIPModeCPE();
+
+function setIPModeCM()
+{
+  var btn0 = document.form1.ipmodecm[0].checked;
+  var btn1 = document.form1.ipmodecm[1].checked;
+
+  if (btn0)
+  {
+    document.form1.staticipcm.disabled = true;
+    document.form1.poolidcm.disabled = false;
+  }
+  if (btn1)
+  {
+    document.form1.staticipcm.disabled = false;
+    document.form1.poolidcm.disabled = true;
+  }
+}
+
+function setIPModeCPE()
+{
+  var btn0 = document.form1.ipmodecpe[0].checked;
+  var btn1 = document.form1.ipmodecpe[1].checked;
+  var btn2 = document.form1.ipmodecpe[2].checked;
+
+  if (btn0)
+  {
+    document.form1.staticipcpe.disabled = true;
+    document.form1.poolidcpe.disabled = true;
+  }
+  if (btn1)
+  {
+    document.form1.staticipcpe.disabled = true;
+    document.form1.poolidcpe.disabled = false;
+  }
+  if (btn2)
+  {
+    document.form1.staticipcpe.disabled = false;
+    document.form1.poolidcpe.disabled = true;
+  }
+}
+
+function setAccType()
+{
+  var btn0 = document.form1.acctype[0].checked;
+  var btn1 = document.form1.acctype[1].checked;
+  var btn2 = document.form1.acctype[2].checked;
+  var btn3 = document.form1.acctype[3].checked;
+  var btn4 = document.form1.acctype[4].checked;
+  var superuser = document.form1.superuser.value;
+
+  if (btn0)
+  {
+    document.form1.password1.disabled = false;
+    document.form1.password2.disabled = false;
+    document.form1.mac.disabled = false;
+    document.form1.usemacauth.disabled = false;
+    document.form1.maccm.disabled = false;
+    document.form1.ipmodecm[0].disabled = true;
+    document.form1.ipmodecm[1].disabled = true;
+    document.form1.poolidcm.disabled = true;
+    document.form1.staticipcm.disabled = true;
+    document.form1.ipmodecpe[0].disabled = false;
+    document.form1.ipmodecpe[1].disabled = false;
+    document.form1.ipmodecpe[2].disabled = false;
+    document.form1.simuse.disabled = false;
+    document.form1.firstname.disabled = false;
+    document.form1.lastname.disabled = false;
+    document.form1.company.disabled = false;
+    document.form1.address.disabled = false;
+    document.form1.city.disabled = false;
+    document.form1.zip.disabled = false;
+    document.form1.country.disabled = false;
+    document.form1.state.disabled = false;
+    document.form1.phone.disabled = false;
+    document.form1.mobile.disabled = false;
+    document.form1.email.disabled = false;
+    document.form1.taxid.disabled = false;
+    document.form1.srvid.disabled = false;
+    document.form1.macpswmode[0].disabled = true;
+    document.form1.macpswmode[1].disabled = true;
+    document.form1.macpswmode[2].disabled = true;
+    if (superuser == 1)
+    {
+      document.form1.downlimit.disabled = false;
+      document.form1.uplimit.disabled = false;
+      document.form1.comblimit.disabled = false;
+      document.form1.expiration.disabled = false;
+      document.form1.uptimelimit.disabled = false;
+      document.form1.credits.disabled = false;
+    }
+  }
+
+  if (btn1)
+  {
+    document.form1.password1.disabled = false;
+    document.form1.password2.disabled = false;
+    document.form1.mac.disabled = true;
+    document.form1.usemacauth.disabled = true;
+    document.form1.maccm.disabled = false;
+    document.form1.ipmodecm[0].disabled = true;
+    document.form1.ipmodecm[1].disabled = true;
+    document.form1.poolidcm.disabled = true;
+    document.form1.staticipcm.disabled = true;
+    document.form1.ipmodecpe[0].disabled = false;
+    document.form1.ipmodecpe[1].disabled = false;
+    document.form1.ipmodecpe[2].disabled = false;
+    document.form1.simuse.disabled = false;
+    document.form1.firstname.disabled = false;
+    document.form1.lastname.disabled = false;
+    document.form1.company.disabled = false;
+    document.form1.address.disabled = false;
+    document.form1.city.disabled = false;
+    document.form1.zip.disabled = false;
+    document.form1.country.disabled = false;
+    document.form1.state.disabled = false;
+    document.form1.phone.disabled = false;
+    document.form1.mobile.disabled = false;
+    document.form1.email.disabled = false;
+    document.form1.taxid.disabled = false;
+    document.form1.srvid.disabled = false;
+    document.form1.macpswmode[0].disabled = false;
+    document.form1.macpswmode[1].disabled = false;
+    document.form1.macpswmode[2].disabled = false;
+    if (superuser == 1)
+    {
+      document.form1.downlimit.disabled = false;
+      document.form1.uplimit.disabled = false;
+      document.form1.comblimit.disabled = false;
+      document.form1.expiration.disabled = false;
+      document.form1.uptimelimit.disabled = false;
+      document.form1.credits.disabled = false;
+    }
+  }
+
+  if (btn2)
+  {
+    document.form1.password1.disabled = false;
+    document.form1.password2.disabled = false;
+    document.form1.mac.disabled = false;
+    document.form1.usemacauth.disabled = true;
+    document.form1.maccm.disabled = false;
+    document.form1.ipmodecm[0].disabled = false;
+    document.form1.ipmodecm[1].disabled = false;
+    document.form1.ipmodecpe[0].disabled = false;
+    document.form1.ipmodecpe[1].disabled = false;
+    document.form1.ipmodecpe[2].disabled = false;
+    document.form1.simuse.disabled = true;
+    document.form1.firstname.disabled = false;
+    document.form1.lastname.disabled = false;
+    document.form1.company.disabled = false;
+    document.form1.address.disabled = false;
+    document.form1.city.disabled = false;
+    document.form1.zip.disabled = false;
+    document.form1.country.disabled = false;
+    document.form1.state.disabled = false;
+    document.form1.phone.disabled = false;
+    document.form1.mobile.disabled = false;
+    document.form1.email.disabled = false;
+    document.form1.taxid.disabled = false;
+    document.form1.srvid.disabled = false;
+    document.form1.macpswmode[0].disabled = true;
+    document.form1.macpswmode[1].disabled = true;
+    document.form1.macpswmode[2].disabled = true;
+    setIPModeCM();
+    if (superuser == 1)
+    {
+      document.form1.downlimit.disabled = false;
+      document.form1.uplimit.disabled = false;
+      document.form1.comblimit.disabled = false;
+      document.form1.expiration.disabled = false;
+      document.form1.uptimelimit.disabled = false;
+      document.form1.credits.disabled = false;
+    }
+  }
+
+  if (btn3)
+  {
+    document.form1.password1.disabled = true;
+    document.form1.password2.disabled = true;
+    document.form1.mac.disabled = true;
+    document.form1.usemacauth.disabled = true;
+    document.form1.maccm.disabled = true;
+    document.form1.ipmodecm[0].disabled = true;
+    document.form1.ipmodecm[1].disabled = true;
+    document.form1.poolidcm.disabled = true;
+    document.form1.staticipcm.disabled = true;
+    document.form1.ipmodecpe[0].disabled = true;
+    document.form1.ipmodecpe[1].disabled = true;
+    document.form1.ipmodecpe[2].disabled = true;
+    document.form1.simuse.disabled = false;
+    document.form1.firstname.disabled = true;
+    document.form1.lastname.disabled = true;
+    document.form1.company.disabled = true;
+    document.form1.address.disabled = true;
+    document.form1.city.disabled = true;
+    document.form1.zip.disabled = true;
+    document.form1.country.disabled = true;
+    document.form1.state.disabled = true;
+    document.form1.phone.disabled = true;
+    document.form1.mobile.disabled = true;
+    document.form1.email.disabled = true;
+    document.form1.taxid.disabled = true;
+    document.form1.srvid.disabled = false;
+    document.form1.macpswmode[0].disabled = true;
+    document.form1.macpswmode[1].disabled = true;
+    document.form1.macpswmode[2].disabled = true;
+    if (superuser == 1)
+    {
+      document.form1.downlimit.disabled = true;
+      document.form1.uplimit.disabled = true;
+      document.form1.comblimit.disabled = true;
+      document.form1.expiration.disabled = true;
+      document.form1.uptimelimit.disabled = true;
+      document.form1.credits.disabled = true;
+	}
+  }
+  
+  if (btn4)
+  {
+    document.form1.password1.disabled = true;
+    document.form1.password2.disabled = true;
+    document.form1.mac.disabled = true;
+    document.form1.usemacauth.disabled = true;
+    document.form1.maccm.disabled = true;
+    document.form1.ipmodecm[0].disabled = true;
+    document.form1.ipmodecm[1].disabled = true;
+    document.form1.poolidcm.disabled = true;
+    document.form1.staticipcm.disabled = true;
+    document.form1.ipmodecpe[0].disabled = true;
+    document.form1.ipmodecpe[1].disabled = true;
+    document.form1.ipmodecpe[2].disabled = true;
+    document.form1.simuse.disabled = false;
+    document.form1.firstname.disabled = true;
+    document.form1.lastname.disabled = true;
+    document.form1.company.disabled = true;
+    document.form1.address.disabled = true;
+    document.form1.city.disabled = true;
+    document.form1.zip.disabled = true;
+    document.form1.country.disabled = true;
+    document.form1.state.disabled = true;
+    document.form1.phone.disabled = true;
+    document.form1.mobile.disabled = true;
+    document.form1.email.disabled = true;
+    document.form1.taxid.disabled = true;
+    document.form1.srvid.disabled = false;
+    document.form1.macpswmode[0].disabled = true;
+    document.form1.macpswmode[1].disabled = true;
+    document.form1.macpswmode[2].disabled = true;
+    if (superuser == 1)
+    {
+      document.form1.downlimit.disabled = true;
+      document.form1.uplimit.disabled = true;
+      document.form1.comblimit.disabled = true;
+      document.form1.expiration.disabled = true;
+      document.form1.uptimelimit.disabled = true;
+      document.form1.credits.disabled = true;
+	}
+  }
+}
+</script>
+<script language="javascript" src="scripts/helper.js" type="text/javascript"></script>
+<script language="javascript" src="scripts/calendarpopup.js"></script>
+<script language="javascript">
+var cal = new CalendarPopup("div1");
+document.write(getCalendarStyles());
+</SCRIPT>
+              </p>
+              <DIV ID="div1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+            </form></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

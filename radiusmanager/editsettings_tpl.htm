@@ -1,0 +1,551 @@
+ 
+<link rel="stylesheet" href="styles.css" type="text/css">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{SYSET0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+	    <div class="tab"> 
+	        <button id="tabbtn1" class="tablinks" onclick="openTab(event, 'tab1')">{SYSET62}</button>
+	        <button id="tabbtn2" class="tablinks" onclick="openTab(event, 'tab2')">{SYSET64}</button>
+	        <button id="tabbtn3" class="tablinks" onclick="openTab(event, 'tab3')">{SYSET65}</button>
+	        <button id="tabbtn4" class="tablinks" onclick="openTab(event, 'tab4')">{SYSET116}</button>
+	        <button id="tabbtn5" class="tablinks" onclick="openTab(event, 'tab5')">{SYSET66}</button>
+	        <button id="tabbtn6" class="tablinks" onclick="openTab(event, 'tab6')">{SYSET63}</button>
+        </div>
+	</td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" align="center" cellpadding="1" cellspacing="0" class="tb-bdr">
+        <tr> 
+          <td><table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td><form action="admin.php?cont=update_settings" method="post" name="form1" id="form1">
+                    <p align="center" class="title2"><font color="#FF0000">{ERROR}</font></p>
+                    <div id="tab1" class="tabcontent"> 
+                      <table border="0" align="center" cellpadding="0" cellspacing="5">
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET18}:</div></td>
+                          <td colspan="2" nowrap class="normal"> <input type="radio" name="disconnmethod" value="0" {CHECKEDDISCAUTO}>
+                            {SYSET19} <br> <input type="radio" name="disconnmethod" value="1" {CHECKEDDISCREMOTE}>
+                            {SYSET20}</td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET33}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="hidelimits" type="checkbox" id="hidelimits" value="1" {CHKHIDELIMITS}></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET92}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="newnasallsrv" type="checkbox" id="newnasallsrv" value="1" {CHKNEWNASALLSRV}></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET93}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="newmanallsrv" type="checkbox" id="newmanallsrv" value="1" {CHKNEWMANALLSRV}></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET108}:</div></td>
+                          <td colspan="2" nowrap class="normal"><select name="disconhour" class="normal" id="disconhour">{HOURS1}
+                          
+                    
+                    
+                            </select>
+                            : 
+                            <select name="disconmin" class="normal" id="disconmin">{MINUTES1}
+                    
+                            </select>
+                            {SYSET109}</td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div id="tab2" class="tabcontent" style="display:none"> 
+                      <table border="0" align="center" cellpadding="0" cellspacing="5">
+                        <tr> 
+                          <td nowrap class="normal"><div align="right"><font color="#FF0000">*</font> 
+                              {SYSET1}: </div></td>
+                          <td colspan="2" nowrap class="normal"><input name="currency" type="text" class="normal" id="currency" value="{CURRENCY}" size="16" maxlength="16"> 
+                          </td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"> <div align="right">{SYSET2}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="vatpercent" type="text" class="normal" id="vatpercent" value="{VATPERCENT}" maxlength="5" size="5">
+                            %</td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"> <div align="right">{SYSET85}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="advtaxpercent" type="text" class="normal" id="advtaxpercent" value="{ADVTAXPERCENT}" maxlength="5" size="5">
+                            %</td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET60}:</div></td>
+                          <td colspan="2" nowrap class="normal"><select name="renewday" class="normal" id="renewday">{RENEWDAYLIST}
+                     
+                    
+                            </select></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET57}:</div></td>
+                          <td colspan="2" nowrap class="normal"><select name="billingstart" class="normal" id="billingstart">{BILLINGSTARTLIST}
+                     
+                    
+                            </select></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET10}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="paymentopt" type="text" class="normal" id="paymentopt" value="{PAYMENTOPT}" size="4" maxlength="4">
+                            {SYSET58}</td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET7}:</div></td>
+                          <td colspan="2" nowrap class="normal"><p> 
+                              <input name="resetctr" type="checkbox" id="resetctr" value="1" {CHKRESETCTR}>
+                            </p></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET104}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="disconnpostpaid" type="checkbox" id="disconnpostpaid" value="1" {CHKDISCONNPOSTPAID}></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET11}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="disablenotpaid" type="checkbox" id="disablenotpaid" value="1" {CHKDISNOTPAID}></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET17}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="disableexpcont" type="checkbox" id="disableexpcont" value="1" {CHKDISEXPCONT}></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET68}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="redeemucp" type="checkbox" id="redeemucp" value="1" {CHKREDEEMUCP}></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET69}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="buycreditsucp" type="checkbox" id="buycreditsucp" value="1" {CHKBUYCREDITSUCP}></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET110}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="buydepositucp" type="checkbox" id="buydepositucp" value="1" {CHKBUYDEPOSITUCP}></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET35}:</div></td>
+                          <td colspan="2" nowrap class="normal">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                              <tr class="normal"> 
+                                <td nowrap> <input name="pm_internal" type="checkbox" id="pm_internal" value="1" {CHKPMINTERNAL}>
+                                  {SYSET36}</td>
+                                <td nowrap><input name="pm_paypalstd" type="checkbox" id="pm_paypalstd" value="1" {CHKPMPAYPALSTD}>
+                                  {SYSET32} </td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td nowrap> <input name="pm_paypalpro" type="checkbox" id="pm_paypalpro" value="1" {CHKPMPAYPALPRO}>
+                                  {SYSET37} </td>
+                                <td nowrap> <input name="pm_paypalexp" type="checkbox" id="pm_paypalexp" value="1" {CHKPMPAYPALEXP}>
+                                  {SYSET38}</td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td nowrap><input name="pm_netcash" type="checkbox" id="pm_netcash" value="1" {CHKPMNETCASH}>
+                                  {SYSET39} </td>
+                                <td nowrap><input name="pm_payfast" type="checkbox" id="pm_payfast" value="1" {CHKPMPAYFAST}>
+                                  {SYSET86}</td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td nowrap><input name="pm_authorizenet" type="checkbox" id="pm_authorizenet" value="1" {CHKPMAUTHORIZENET}>
+                                  {SYSET61} </td>
+                                <td nowrap><input name="pm_dps" type="checkbox" id="pm_dps" value="1" {CHKPMDPS}>
+                                  {SYSET67} </td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td nowrap><input name="pm_2co" type="checkbox" id="pm_2co" value="1" {CHKPM2CO}>
+                                  {SYSET70}</td>
+                                <td nowrap><input name="pm_payu" type="checkbox" id="pm_payu" value="1" {CHKPMPAYU}>
+                                  {SYSET103} </td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td nowrap><input name="pm_paytm" type="checkbox" id="pm_paytm" value="1" {CHKPMPAYTM}>
+                                  {SYSET105} </td>
+                                <td nowrap><input name="pm_bkash" type="checkbox" id="pm_bkash" value="1" {CHKPMBKASH}>
+                                  {SYSET107} </td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td nowrap><input name="pm_flutterwave" type="checkbox" id="pm_flutterwave" value="1" {CHKPMFLUTTERWAVE}>
+                                  {SYSET112} </td>
+                                <td nowrap><input name="pm_easypay" type="checkbox" id="pm_easypay" value="1" {CHKPMEASYPAY}>
+                                  {SYSET113} </td>
+                              </tr>
+                              <tr class="normal">
+                                <td nowrap><input name="pm_mpesa" type="checkbox" id="pm_mpesa" value="1" {CHKPMMPESA}>
+                                  {SYSET114} </td>
+                                <td nowrap><input name="pm_custom" type="checkbox" id="pm_custom" value="1" {CHKPMCUSTOM}>
+                                  {SYSET111} </td>
+                              </tr>
+                            </table>
+                            
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div id="tab3" class="tabcontent" style="display:none"> 
+                      <table border="0" align="center" cellpadding="0" cellspacing="5">
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET56}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="maclock" type="checkbox" id="maclock" value="1" {CHKMACLOCK}></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET31}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="edituserdata" type="checkbox" id="edituserdata" value="1" {CHKEDITUSERDATA}></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET6}:</div></td>
+                          <td colspan="2" nowrap class="normal"><p> 
+                              <input name="changesrv" type="radio" value="0" {CHKCHGSRV0}>
+                              {SYSET71}<br>
+                              <input name="changesrv" type="radio" value="1" {CHKCHGSRV1}>
+                              {SYSET72}<br>
+                              <input type="radio" name="changesrv" value="2" {CHKCHGSRV2}>
+                              {SYSET73} </p></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET59}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="changepswucp" type="checkbox" id="changepswucp" value="1" {CHKCHANGEPSWUCP}></td>
+                        </tr>
+                        <tr>
+                          <td nowrap class="normal"><div align="right">{SYSET115}:</div></td>
+                          <td colspan="2" nowrap class="normal"><table border="0" cellspacing="0" cellpadding="0">
+                              <tr class="normal"> 
+                                <td><input name="reg_firstname" type="checkbox" id="reg_firstname" value="1" {CHKREGFIRSTNAME}>
+                                  {SYSET45}</td>
+                                <td><input name="reg_lastname" type="checkbox" id="reg_lastname" value="1" {CHKREGLASTNAME}>
+                                  {SYSET46}</td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td><input name="reg_address" type="checkbox" id="reg_address" value="1" {CHKREGADDRESS}>
+                                  {SYSET47}</td>
+                                <td><input name="reg_city" type="checkbox" id="reg_city" value="1" {CHKREGCITY}>
+                                  {SYSET48}</td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td><input name="reg_zip" type="checkbox" id="reg_zip" value="1" {CHKREGZIP}>
+                                  {SYSET49}</td>
+                                <td><input name="reg_country" type="checkbox" id="reg_country" value="1" {CHKREGCOUNTRY}>
+                                  {SYSET50}</td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td><input name="reg_state" type="checkbox" id="reg_state" value="1" {CHKREGSTATE}>
+                                  {SYSET51}</td>
+                                <td><input name="reg_phone" type="checkbox" id="reg_phone" value="1" {CHKREGPHONE}>
+                                  {SYSET52}</td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td><input name="reg_mobile" type="checkbox" id="reg_mobile" value="1" {CHKREGMOBILE}>
+                                  {SYSET53}</td>
+                                <td><input name="reg_email" type="checkbox" id="reg_email" value="1" {CHKREGEMAIL}>
+                                  {SYSET54}</td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td><input name="reg_vatid" type="checkbox" id="reg_vatid" value="1" {CHKREGVATID}>
+                                  {SYSET84} </td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </table></td>
+                        </tr>
+                      </table>
+                    </div>
+
+                    <div id="tab4" class="tabcontent" style="display:none"> 
+                      <table border="0" align="center" cellpadding="0" cellspacing="5">
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET30}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="selfreg" type="checkbox" id="selfreg" value="1" {CHKSELFREG}></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET55}:</div></td>
+                          <td colspan="2" nowrap class="normal"><p> 
+                              <input name="selfreg_nameactsms" type="checkbox" id="selfreg_nameactsms" value="1" {CHKSELFREGNAMEACTSMS}>
+                              {SYSET95}<br>
+                              <input name="selfreg_nameactemail" type="checkbox" id="selfreg_nameactemail" value="1" {CHKSELFREGNAMEACTEMAIL}>
+                              {SYSET96} </p></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET97}:</div></td>
+                          <td colspan="2" nowrap class="normal"><p> 
+                              <input name="selfreg_mobactsms" type="checkbox" id="selfreg_mobactsms" value="1" {CHKSELFREGMOBACTSMS}>
+                              {SYSET95}</p></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET44}:</div></td>
+                          <td colspan="2" nowrap class="normal"><table border="0" cellspacing="0" cellpadding="0">
+                              <tr class="normal"> 
+                                <td><input name="selfreg_firstname" type="checkbox" id="selfreg_firstname" value="1" {CHKSELFREGFIRSTNAME}>
+                                  {SYSET45}</td>
+                                <td><input name="selfreg_lastname" type="checkbox" id="selfreg_lastname" value="1" {CHKSELFREGLASTNAME}>
+                                  {SYSET46}</td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td><input name="selfreg_address" type="checkbox" id="selfreg_address" value="1" {CHKSELFREGADDRESS}>
+                                  {SYSET47}</td>
+                                <td><input name="selfreg_city" type="checkbox" id="selfreg_city" value="1" {CHKSELFREGCITY}>
+                                  {SYSET48}</td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td><input name="selfreg_zip" type="checkbox" id="selfreg_zip" value="1" {CHKSELFREGZIP}>
+                                  {SYSET49}</td>
+                                <td><input name="selfreg_country" type="checkbox" id="selfreg_country" value="1" {CHKSELFREGCOUNTRY}>
+                                  {SYSET50}</td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td><input name="selfreg_state" type="checkbox" id="selfreg_state" value="1" {CHKSELFREGSTATE}>
+                                  {SYSET51}</td>
+                                <td><input name="selfreg_phone" type="checkbox" id="selfreg_phone" value="1" {CHKSELFREGPHONE}>
+                                  {SYSET52}</td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td><input name="selfreg_mobile" type="checkbox" id="selfreg_mobile" value="1" {CHKSELFREGMOBILE}>
+                                  {SYSET53}</td>
+                                <td><input name="selfreg_email" type="checkbox" id="selfreg_email" value="1" {CHKSELFREGEMAIL}>
+                                  {SYSET54}</td>
+                              </tr>
+                              <tr class="normal"> 
+                                <td><input name="selfreg_vatid" type="checkbox" id="selfreg_vatid" value="1" {CHKSELFREGVATID}>
+                                  {SYSET84} </td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </table></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET88}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="selfreg_endupemail" type="checkbox" id="selfreg_endupemail" value="1" {CHKSELFREGENDUPEMAIL}>
+                            {SYSET89}<br> <input name="selfreg_endupmobile" type="checkbox" id="selfreg_endupmobile" value="1" {CHKSELFREGENDUPMOBILE}>
+                            {SYSET90} </td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET94}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="simuseselfreg" type="text" class="normal" id="simuseselfreg" value="{SIMUSESELFREG}" size="3" maxlength="3"></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET98}:</div></td>
+                          <td colspan="2" nowrap class="normal"><select name="defgrpid" class="normal" id="defgrpid">{DEFGRPLIST}
+                            </select></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET102}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="captcha" type="checkbox" id="captcha" value="1" {CHKCAPTCHA}></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET81}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="ias_email" type="checkbox" id="ias_email" value="1" {CHKIASEMAIL}>
+                            {SYSET82}<br> <input name="ias_mobile" type="checkbox" id="ias_mobile" value="1" {CHKIASMOBILE}>
+                            {SYSET83}</td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET91}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="ias_endupemail" type="checkbox" id="ias_endupemail" value="1" {CHKIASENDUPEMAIL}>
+                            {SYSET89}<br> <input name="ias_endupmobile" type="checkbox" id="ias_endupmobile" value="1" {CHKIASENDUPMOBILE}>
+                            {SYSET90} </td>
+                        </tr>
+                        <tr>
+                          <td nowrap class="normal"><div align="right">{SYSET87}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="ias_verify" type="checkbox" id="ias_verify" value="1" {CHKIASVERIFY}></td>
+                        </tr>
+                      </table>
+                    </div>
+
+                    <div id="tab5" class="tabcontent" style="display:none"> 
+                      <table border="0" align="center" cellpadding="0" cellspacing="5">
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET3}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="unixacc" type="checkbox" id="unixacc" value="1" {CHKUNIXACC}></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET4}:</div></td>
+                          <td colspan="2" nowrap class="normal"><p> 
+                              <input name="diskquota" type="checkbox" id="diskquota" value="1" {CHKDISKQUOTA}>
+                            </p></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET5}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="quotatpl" type="text" class="normal" id="quotatpl" value="{QUOTATPL}" size="32" maxlength="32"></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET40}:</div></td>
+                          <td colspan="2" nowrap class="normal"> <input type="radio" name="unixhost" value="0" {CHECKEDUNIXLOCAL}>
+                            {SYSET41} <br> <input type="radio" name="unixhost" value="1" {CHECKEDUNIXREMOTE}>
+                            {SYSET42}</td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET43}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="remotehostname" type="text" class="normal" id="remotehostname" value="{REMOTEHOSTNAME}" size="32" maxlength="100"></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div id="tab6" class="tabcontent" style="display:none"> 
+                      <table border="0" align="center" cellpadding="0" cellspacing="5">
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET77}:</div></td>
+                          <td colspan="2" nowrap class="normal"> <table width="10%" border="0" cellpadding="1" cellspacing="0" class="normal">
+                              <tr> 
+                                <td><input name="emailselfregman" type="checkbox" id="emailselfregman" value="1" {CHKEMAILSELFREGMAN}></td>
+                                <td>{SYSET80} </td>
+                              </tr>
+                            </table></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET78}:</div></td>
+                          <td colspan="2" nowrap class="normal"><table width="10%" border="0" cellpadding="1" cellspacing="0" class="normal">
+                              <tr> 
+                                <td><input name="emailnewsrv" type="checkbox" id="emailnewsrv" value="1" {CHKEMAILNEWSRV}></td>
+                                <td>{SYSET80} </td>
+                                <td><img src="images/spacer.gif" width="10" height="1"></td>
+                                <td><input name="smsnewsrv" type="checkbox" id="smsnewsrv" value="1" {CHKSMSNEWSRV}></td>
+                                <td>{SYSET106}</td>
+                              </tr>
+                            </table></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET34}:</div></td>
+                          <td colspan="2" nowrap class="normal"><table width="10%" border="0" cellpadding="1" cellspacing="0" class="normal">
+                              <tr> 
+                                <td><input name="emailwelcome" type="checkbox" id="emailwelcome" value="1" {CHKEMAILWELCOME}></td>
+                                <td>{SYSET80} </td>
+                                <td><img src="images/spacer.gif" width="10" height="1"></td>
+                                <td><input name="smswelcome" type="checkbox" id="smswelcome" value="1" {CHKSMSWELCOME}></td>
+                                <td>{SYSET106}</td>
+                              </tr>
+                            </table></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET79}:</div></td>
+                          <td colspan="2" nowrap class="normal"><table width="10%" border="0" cellpadding="1" cellspacing="0" class="normal">
+                              <tr> 
+                                <td><input name="emailrenew" type="checkbox" id="emailrenew" value="1" {CHKEMAILRENEW}></td>
+                                <td>{SYSET80} </td>
+                                <td><img src="images/spacer.gif" width="10" height="1"></td>
+                                <td><input name="smsrenew" type="checkbox" id="smsrenew" value="1" {CHKSMSRENEW}></td>
+                                <td>{SYSET106}</td>
+                              </tr>
+                            </table></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET29}:</div></td>
+                          <td colspan="2" nowrap class="normal"><table width="10%" border="0" cellpadding="1" cellspacing="0" class="normal">
+                              <tr> 
+                                <td><input name="emailexpiry" type="checkbox" id="emailexpiry" value="1" {CHKEMAILEXPIRY}></td>
+                                <td>{SYSET80} </td>
+                                <td><img src="images/spacer.gif" width="10" height="1"></td>
+                                <td><input name="smsexpiry" type="checkbox" id="smsexpiry" value="1" {CHKSMSEXPIRY}></td>
+                                <td>{SYSET106}</td>
+                              </tr>
+                            </table></td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET74}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="warnmode" type="radio" value="0" {CHKWARNMODE0} onClick="setWarnMode()">
+                            {SYSET75} <br> <input type="radio" name="warnmode" value="1" {CHKWARNMODE1} onClick="setWarnMode()">
+                            {SYSET76}</td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET21}:</div></td>
+                          <td nowrap class="normal"><input name="warndl" type="text" class="normal" id="warndl" value="{WARNDL}" size="20" maxlength="20">
+                            {SYSET22} </td>
+                          <td nowrap class="normal"><input name="warndlpercent" type="text" class="normal" id="warndlpercent2" value="{WARNDLPERCENT}" size="3" maxlength="3">
+                            % </td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET23}:</div></td>
+                          <td nowrap class="normal"><input name="warnul" type="text" class="normal" id="warnul" value="{WARNUL}" size="20" maxlength="20">
+                            {SYSET22}</td>
+                          <td nowrap class="normal"> <input name="warnulpercent" type="text" class="normal" id="warnulpercent2" value="{WARNULPERCENT}" size="3" maxlength="3">
+                            %</td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET24}:</div></td>
+                          <td nowrap class="normal"><input name="warncomb" type="text" class="normal" id="warncomb" value="{WARNCOMB}" size="20" maxlength="20">
+                            {SYSET22} </td>
+                          <td nowrap class="normal"><input name="warncombpercent" type="text" class="normal" id="warncombpercent2" value="{WARNCOMBPERCENT}" size="3" maxlength="3">
+                            %</td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET25}:</div></td>
+                          <td nowrap class="normal"><input name="warnuptime" type="text" class="normal" id="warnuptime" value="{WARNUPTIME}" size="20" maxlength="20">
+                            {SYSET27}</td>
+                          <td nowrap class="normal"> <input name="warnuptimepercent" type="text" class="normal" id="warnuptimepercent2" value="{WARNUPTIMEPERCENT}" size="3" maxlength="3">
+                            % </td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET26}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input name="warnexpiry" type="text" class="normal" id="warnexpiry" value="{WARNEXPIRY}" size="20" maxlength="20">
+                            {SYSET28} </td>
+                        </tr>
+                        <tr> 
+                          <td nowrap class="normal"><div align="right">{SYSET99}:</div></td>
+                          <td colspan="2" nowrap class="normal"><input type="radio" name="expalertmode" value="0" {CHKEXPALERT0}>
+                            {SYSET100}<br> <input type="radio" name="expalertmode" value="1" {CHKEXPALERT1}>
+                            {SYSET101}</td>
+                        </tr>
+                      </table>
+                    </div>
+                    <p align="center" class="normal"> <font color="#FF0000">*</font> 
+                      {SYSET12}</p>
+                    <p align="center" class="normal"> 
+                      <input name="submit" type="submit" id="submit" value="{SYSET13}">
+                      <SCRIPT type=text/javascript><!--
+focusField("currency");
+setWarnMode();
+
+function focusField(name)
+{
+  for(var i = 0; i < document.forms.length; ++i) {
+    var obj = document.forms[i].elements[name];
+    if (obj) {
+      if (obj.length) { obj = obj[0]; }
+      if (obj.focus) { obj.focus(); }
+    }
+  }
+} 
+
+function setWarnMode()
+{
+	if  (document.form1.warnmode[0].checked)
+	{
+		document.form1.warndl.disabled = false;
+		document.form1.warnul.disabled = false;
+		document.form1.warncomb.disabled = false;
+		document.form1.warnuptime.disabled = false;
+		document.form1.warndlpercent.disabled = true;
+		document.form1.warnulpercent.disabled = true;
+		document.form1.warncombpercent.disabled = true;
+		document.form1.warnuptimepercent.disabled = true;
+	}
+	else
+	{
+		document.form1.warndl.disabled = true;
+		document.form1.warnul.disabled = true;
+		document.form1.warncomb.disabled = true;
+		document.form1.warnuptime.disabled = true;
+		document.form1.warndlpercent.disabled = false;
+		document.form1.warnulpercent.disabled = false;
+		document.form1.warncombpercent.disabled = false;
+		document.form1.warnuptimepercent.disabled = false;
+	}
+}
+//--> </SCRIPT>
+                    </p>
+                  </form></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<script language="JavaScript" src="scripts/tab.js" type="text/JavaScript"></script>
