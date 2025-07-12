@@ -1,5 +1,0 @@
-New password activation code: {ACTCODE}
-
-
-Available tags:
-ACTCODE - activation code

@@ -1,5 +1,0 @@
-Your new password is: {PASSWORD}
-
-
-Available tags:
-PASSWORD - password
