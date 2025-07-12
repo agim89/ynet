@@ -1,0 +1,9 @@
+<Files *>
+  Order allow,deny
+  Deny from All
+</Files>
+
+<FilesMatch sysapi.php|sysapi_example.php>
+     Order Deny,Allow
+     Allow from All
+</FilesMatch>
