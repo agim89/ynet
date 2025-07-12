@@ -1,0 +1,49 @@
+<link href="styles.css" rel="stylesheet" type="text/css"> 
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{LSTRFL0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <form name="form1" method="post" action="admin.php?cont=list_refillcards_action">
+    <tr> 
+      <td> <p align="center" class="quickjump">{QUICKJUMP}</p></td>
+    </tr>
+    <tr> 
+      <td> <TABLE cellSpacing=1 cellPadding=1 
+            width="100%" border=0 
+            valign="top">
+        </TABLE>
+        {TABLE}</td>
+    </tr>
+    <tr> 
+      <td class="normal"><strong>{LSTRFL1}: 
+        <select name="action" class="normal" id="action" onChange="Confirm()">
+          <option></option>
+          <option value="0">{LSTRFL2}</option>
+          <option value="1">{LSTRFL3}</option>
+          <option value="2">{LSTRFL4}</option>
+        </select>
+        <font color="{COL_ACTIVE}">*{LSTRFL5}</font>&nbsp;&nbsp;&nbsp;<font color="{COL_EXPIRED}">*{LSTRFL6}</font>&nbsp;&nbsp;&nbsp;<font color="{COL_REVOKED}">*{LSTRFL7}</font></strong></td>
+    </tr>
+    <tr> 
+      <td class="quickjump"><div align="center">{QUICKJUMP}</div></td>
+    </tr>
+    <tr>
+      <td class="quickjump"><div align="center">{EXPORT}</div></td>
+    </tr>
+  </form>
+</table>
+<script language="JavaScript" src="scripts/helper.js" type="text/JavaScript">
+</script>

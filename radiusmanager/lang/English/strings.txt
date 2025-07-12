@@ -1,0 +1,644 @@
+//
+// Radius Manager string definitions file
+//
+// There should be a TAB character between token and strings
+//
+
+// links
+
+href_trafficreport			traffic report
+href_trafrepdly				daily traffic report
+href_addcredits				add credits
+href_addmoney				add deposit
+href_postpaidbilling			postpaid billing
+href_listinvoices			list invoices
+href_chgsrv				change service plan
+href_listsrvhistory			service plan history
+href_deluser				delete
+href_listpostauth			authentication log
+href_disconnuser			DISCONNECT
+href_disconnuser1			Update and Disconnect
+href_listconn				connection report
+href_cancel				cancel
+href_register_acc			Register an account
+href_verify_acc				Verify account
+href_edit				Edit
+href_selfdisconn			Click here to disconnect and return to full mode
+href_sendemail				email
+href_sendsms				SMS
+
+// strings
+
+str_cardser				Card series
+str_unpaidinv				Unpaid invoice found
+str_unpaidgraceinv			Grace period expired
+str_availcolumns			Available columns
+str_selectall				select all
+str_selectnone				deselect all
+str_pooltype_docsis			DOCSIS
+str_pooltype_radius			RADIUS
+str_none				None
+str_view				View and print invoice
+str_ref					Ref.
+str_unreg_user				Unregistered
+str_auto_renew				Automatic renewal
+str_regdisabled				Self registration is disabled
+str_emailsubjexpiry			Account expiry alert
+str_emailsubjrenewed			Your account has been renewed
+str_emailsubjcantrenew			Problem renewing your account
+str_emailsubjsrvchg			New service plan activated
+str_emailsubjwelcome			Welcome new user
+str_emailsubjselfreg			New self registered account
+str_emailsubjiasreg			New IAS account
+str_emailsubjactpsw			Activate your new password
+str_emailsubjnewpsw			New password activated
+str_emailsubjactacc			Activate your new account
+str_emailsubjdepositadd			Balance increased
+str_yymmdd				YYYY-MM-DD
+str_yymmddhhmmss			YYYY-MM-DD HH:MM:SS
+str_resetctr				WARNING!<br><br>Current credits will be lost upon service plan change!
+str_finished				finished
+str_completed				completed
+str_cancelled				cancelled
+str_paymode_cash			C
+str_paymode_transfer			T
+str_paymode_internal			I
+str_paymode_card			P
+str_paymode_online			O
+str_moneyadd				Money add
+str_addmode				Additional credit mode active
+str_monthly_srv				Monthly service plan
+str_fillupman_srv			Deposit
+str_fillupcard_srv			Card refill
+str_system				system
+str_na					n/a
+str_notavail				Not available
+str_dynamic				dynamic
+str_hide				-
+str_datarate				kbps
+str_unlimited				unlimited
+str_next_page				>>
+str_prev_page				<<
+str_first_page				first
+str_last_page				last
+str_no_limit				no limit
+str_never_expires			never
+str_default_fullname			Unknown user name
+str_acc_disabled			disabled
+str_acc_expired				expired
+str_acc_notverified			Unverified
+str_acc_active				active
+str_acc_limit				<-limit
+str_yes					yes
+str_no					no
+str_any					any
+str_all					all
+str_all_postpaid			All postpaid service plans
+str_never_seen				never
+str_online				online
+str_offline				offline
+str_unregged				classic prepaid
+str_regged				refill
+str_acctype_regular			regular
+str_acctype_maconly			MAC account
+str_acctype_carduser			prepaid card
+str_acctype_aclmikrotik			Mikrotik acces list
+str_acctype_aclstaros			StarOS acces list
+str_acctype_ias				Instant access service
+str_acctype_docsis			DOCSIS
+str_expiremode_nminutes			minute(s) from card activation
+str_expiremode_nhours			hour(s) from card activation
+str_expiremode_ndays			day(s) from card activation
+str_expiremode_nmonths			month(s) from card activation
+str_hours				hours
+str_unknown_nas				Unknown NAS
+str_selfreg				Self reg.
+str_exchg_rate				exchange rate:
+str_emailpreview			Sending preview email to administrator
+str_emailreal				Sending email to
+str_smsreal				Sending SMS to
+str_home				Return home
+str_done				Done
+str_totals				TOTALS:
+str_id					id
+str_pin					pin
+str_password				password
+str_trfsumcsv1				User name
+str_trfsumcsv2				First name
+str_trfsumcsv3				Last name
+str_trfsumcsv4				Online time
+str_trfsumcsv5				Download
+str_trfsumcsv6				Upload
+str_trfsumcsv7				Total
+str_lstusrcsv1				User name
+str_lstusrcsv2				Service
+str_lstusrcsv3				Expiry
+str_lstusrcsv4				Download limit
+str_lstusrcsv5				Upload limit
+str_lstusrcsv6				Total limit
+str_lstusrcsv7				Uptime limit
+str_lstusrcsv8				CPE IP
+str_lstusrcsv9				CM IP
+str_lstusrcsv10				CM MAC
+str_lstusrcsv11				First name
+str_lstusrcsv12				Last name
+str_lstusrcsv13				Company
+str_lstusrcsv14				Address
+str_lstusrcsv15				City
+str_lstusrcsv16				ZIP
+str_lstusrcsv17				Country
+str_lstusrcsv18				State
+str_lstusrcsv19				Phone
+str_lstusrcsv20				Cell number
+str_lstusrcsv21				Email
+str_lstusrcsv22				Registered
+str_lstusrcsv23				Last logoff
+str_lstusrcsv24				Comment
+str_lstusrfastcsv1			User name
+str_lstusrfastcsv2			First name
+str_lstusrfastcsv3			Last name
+str_lstusrfastcsv4			Address
+str_lstusrfastcsv5			City
+str_lstusrfastcsv6			Zip
+str_lstusrfastcsv7			Country
+str_lstusrfastcsv8			State
+str_lstusrfastcsv9			Phone
+str_lstusrfastcsv10			Cell number
+str_lstusrfastcsv11			Email
+str_lstusrfastcsv12			Comment
+str_lstinvcsv1				Date
+str_lstinvcsv2				Invoice number
+str_lstinvcsv3				Invoice type
+str_lstinvcsv4				Description
+str_lstinvcsv5				Created by
+str_lstinvcsv6				Customer
+str_lstinvcsv7				Price
+str_lstinvcsv8				Balance
+str_lstinvcsv9				Added download Bytes
+str_lstinvcsv10				Available download Bytes
+str_lstinvcsv11				Added upload Bytes
+str_lstinvcsv12				Available upload Bytes
+str_lstinvcsv13				Added total Bytes
+str_lstinvcsv14				Available total Bytes
+str_lstinvcsv15				Added time
+str_lstinvcsv16				Available online time
+str_lstinvcsv17				Added days
+str_lstinvcsv18				Expiry
+str_lstinvcsv19				Comment
+str_lstinvcsv20				Paid
+str_lstrflcard1				PIN
+str_lstrflcard2				Series
+str_lstrflcard3				Activated by
+str_lstrflcard4				Activated on
+str_lstrflcard5				Expiry
+str_lstrflcard6				Gross card value
+str_lstrflcard7				Generated on
+str_exportcsv				CSV export
+str_found				Found:
+str_gen_invoices			Generating invoices for postpaid users
+str_combined_srv			Combined internet service plan
+str_printallinv				Print invoices
+str_intsservice				Internet service
+str_running				OK
+str_not_running				<font color="#FF0000">NOT RUNNING!</font>
+str_availbalance			Available balance
+str_paypal_redir_ucp			CLICK HERE TO COMPLETE THE TRANSACTION
+str_paypal_redir_ias			CLICK HERE TO GET THE IAS CODE
+str_enabled				Enabled
+str_ok					OK
+str_err					ERROR
+str_skipinvzero				skipped - zero price
+str_skipinvdisacc			skipped - disabled account
+str_graphtrfday				Traffic (day)
+str_graphtrfweek			Traffic (week)
+str_graphtrfmonth			Traffic (month)
+str_graphtrfyear			Traffic (year)
+str_graphsnrday				SNR (day)
+str_graphsnrweek			SNR (week)
+str_graphsnrmonth			SNR (month)
+str_graphsnryear			SNR (year)
+str_graphsnrccqday			SNR/CCQ (day)
+str_graphsnrccqweek			SNR/CCQ (week)
+str_graphsnrccqmonth			SNR/CCQ (month)
+str_graphsnrccqyear			SNR/CCQ (year)
+str_graphsigday				Power level (day)
+str_graphsigweek			Power level (week)
+str_graphsigmonth			Power level (month)
+str_graphsigyear			Power level (year)
+str_graphlatday				RTT (day)
+str_graphlatweek			RTT (week)
+str_graphlatmonth			RTT (month)
+str_graphlatyear			RTT (year)
+str_graphdl				DL
+str_graphul				UL
+str_graphds				DS
+str_graphus				US
+str_graphlat				Latency
+str_snrus				US SNR
+str_ccqus				US CCQ
+str_importcomplete			Accounts imported:
+str_deposit				Deposit
+
+// error messages
+
+err_wrong_url				The page you are trying to access is restricted or unavailable
+err_invalid_actcode			Invalid activation code
+err_wrongusermail			Wrong user name or email address
+err_wrongusermobile			Wrong user name or cell number
+err_no_groupname			No group name was defined!
+err_nothing_to_print			Nothing to print!
+err_pdt					PDT received an HTTP GET request without a transaction ID
+err_paypal_unknown			Unknown PayPal error!
+err_unknown				Unknown error!
+err_raddb				/usr/local/etc/raddb is not accessible!
+err_clientsconf				/usr/local/etc/raddb/clients.conf is not accessible!
+err_overlapping_interval		Intervals are overlapping!
+err_smsapi				SMS API error:
+err_nopaymentmethod			No payment method has been selected!
+err_acceptterms				You should agree the Terms and conditions before activating the new account
+err_no_remotehost			No remote host name or IP defined!
+err_nodata				No data found!
+err_daily_dlquota_reached		Daily download quota reached!
+err_daily_ulquota_reached		Daily upload quota reached!
+err_daily_totalquota_reached		Daily total traffic quota reached!
+err_daily_timequota_reached		Daily time quota reached!
+err_incorrect_account_type		Incorrect account type!
+err_no_download_left			Download limit reached!
+err_no_upload_left			Upload limit reached!
+err_no_total_left			Total traffic limit reached!
+err_no_time_left			No more online time left!
+err_account_expired			The account has expired!
+err_invalid_service			Invalid service reference!
+err_invalid_mac				Invalid MAC address!
+err_nas_not_allowed			You are not allowed to connect to this NAS!
+err_conn_not_allowed			Connection is not allowed now!
+err_account_disabled			Account is disabled!
+err_account_not_verified		Unable to login, account is not verified!
+err_firstname_invalid			First name is invalid!
+err_lastname_invalid			Last name is invalid!
+err_address_invalid			Address is invalid!
+err_city_invalid			City is invalid!
+err_zip_invalid				ZIP is invalid!
+err_country_invalid			No country selected!
+err_state_invalid			No state selected!
+err_phone_invalid			Invalid phone number!
+err_mobile_invalid			Invalid cell number!
+err_mobile_alreadyused			Cell number already used!
+err_no_phone				No phone number entered!
+err_no_mobile				No cell number entered!
+err_email_invalid			Invalid email address!
+err_email_alreadyused			Email address already used!
+err_email_not_sent			Email not sent!
+err_vatid_invalid			Invalid VAT id!
+err_sms_not_sent			SMS not sent!
+err_currency_not_supported		Unsupported system currency!
+err_currency_not_usd			Default system currency has to be USD to accept direct payment!
+err_invalid_interval			Invalid interval!
+err_invalid_pool			Invalid IP pool!
+err_pool_overlaps			The given pool overlaps an existing pool!
+err_pool_assigned			Error deleting an assigned pool!
+err_no_poolname				No pool name entered!
+err_no_cmtsname				No CMTS name entered!
+err_no_community			No SNMP community entered!
+err_no_apiuser				No Mikrotik API user name entered!
+err_no_apipassword			No Mikrotik API password entered!
+err_no_free_ip_cm			No free CM IP address available!
+err_no_free_ip_cpe			No free CPE IP address available!
+err_invalid_paymentopt			Invalid payment option!
+err_enter_cardnum_prepaid		Only prepaid users can enter card codes!
+err_descr_empty				Description of service plan cannot be empty!
+err_price_negative			Price cannot be a negative numbers!
+err_srv_change_no_srv			Nothing to cancel!
+err_srv_change_postpaid_active		A postpaid service plan has already been assigned today!
+err_changesrv_only_prepaid		Only prepaid users can change the service plan!
+err_changesrv_prepaid_only		Only prepaid users can select a service plan!
+err_op_not_allowed			Operation not allowed!
+err_chgpswucp_disabled			Password change is not permitted!
+err_buy_services_month_active		Monthly service plan is already active!
+err_buy_services_no_credit		You do not have enough funds in deposit. Maximal amount is 
+err_buy_services_min_amount		Minimum amount is 
+err_buy_services_amount			Wrong amount!
+err_buy_services_prepaid		Only prepaid users can access this option!
+err_add_credits_balance			Insufficient balance!
+err_login				Wrong user name or password!
+err_no_currency				Currency code not set!
+err_traffic_add_unitprice		Wrong unit price!
+err_traffic_add_amount			Wrong amount!
+err_traffic_add_monthly			Only one month can be added for combined service plans!
+err_traffic_add_additional		Cannot add additional MegaBytes for expired combined service plans!
+err_money_add_amount			Wrong amount!
+err_invoice_exists			Invoice already exists!
+err_payout_already_submitted		Payout already submitted!
+err_form_already_submitted		Form already submitted!
+err_srvchange_already_submitted		Service plan change already submitted!
+err_invoice_already_submitted		Invoice already submitted!
+err_simuse_invalid			Simultaneous use field is invalid!
+err_card_already_gen			Cards are already generated!
+err_card_downlimit			Download limit must be zero or greater number!
+err_card_uplimit			Upload limit must be zero or greaternumber!
+err_card_uptimelimit			Online time limit must be zero or greater number!
+err_card_expired			Expired prepaid card!
+err_card_revoked			The prepaid card has been revoked!
+err_card_not_found			Prepaid card not found!
+err_card_no_srv				Service plan isn't assigned!
+err_account_locked			Your account has been locked!
+err_credits_invalid			Credits cannot be negative!
+err_generating_ias			Error generating IAS account!
+err_adding_credits			Error adding credits!
+err_dup_form				Duplicate transaction!
+err_card_invalid			Invalid card number!
+err_cannot_create_file			Cannot create file!
+err_cannot_write_file			Cannot write file!
+err_cannot_delete_file			Cannot delete file!
+err_card_expiration			Card expiry date is invalid!
+err_card_value				Invalid card value!
+err_card_quantity			Invalid quantity!
+err_card_secret				Invalid secret length!
+err_unit_price				Unit price should be greater than zero!
+err_unit_time				Time unit is always greater than zero!
+err_unit_trafficdl			Download traffic unit is always greater than zero!
+err_unit_trafficul			Upload traffic unit is always greater than zero!
+err_unit_trafficcomb			Combined traffic unit is always greater than zero!
+err_addamount				Additional amount is always greater than zero!
+err_minamount				Minimal amount cannot be zero or negative number!
+err_rest_manager			Only invoices for the current manager can be listed!
+err_max_usernum				Maximal user number is reached!<br><br>Please upgrade your license.
+err_max_cmtsnum				Maximal number of CMTSs is reached!
+err_max_nasnum				Maximal number of NASs is reached!
+err_zero_payout				Please enter non-zero amount!
+err_no_perm				You don't have sufficient privilege to access this function!
+err_mod_unavailable			Module not available!
+err_no_cts				Connections tracking system is not available in this version!
+err_no_simuse_attr			No Simultaneous-Use attribute in radcheck for the given user!
+err_user_exists				Account already exists!
+err_user_no_username			User name not submitted!
+err_user_mac_problem			MAC address format error!
+err_user_not_found			User not found!
+err_manager_not_found			Manager not found!
+err_inv_not_found			Invoice not found!
+err_user_name_length			Invalid user name length!
+err_mac_cm				Invalid CM MAC address!
+err_mac_cpe				Invalid CPE MAC address!
+err_maccm_already_assigned		CM MAC address already assigned to user
+err_maccpe_already_assigned		CPE MAC address already assigned to user
+err_exp_date				Expiry date is invalid!
+err_payment_date			Payment date is invalid!
+err_username_not_valid			Invalid character in user name!
+err_managername_not_valid		Invalid manager name!
+err_no_nasname				NAS name is not defined!
+err_no_apname				AP name is not defined!
+err_invalid_ip				IP address is not valid!
+err_no_nassecret			NAS secret is not defined!
+err_no_naspassword			NAS password is not defined!
+err_nas_not_found			NAS not found!
+err_ap_not_found			AP not found!
+err_nas_exists				IP address is already assigned to another NAS!
+err_ap_exists				IP address is already assigned to another AP!
+err_pool_not_found			IP pool not found!
+err_cmts_not_found			CMTS not found!
+err_psw_nomatch				Password doesn't match!
+err_psw_null				Emtpy password submitted!
+err_psw_length				Invalid password length!
+err_psw_oldpsw				Current password doesn't match!
+err_psw_invalid				Invalid character in password!
+err_cant_del_admin			Can't delete superuser!
+err_only_superuser			Superuser privileges needed!
+err_cant_add_zero_mb			Cannot add zero amount of traffic!
+err_cant_add_zero_money			Cannot add zero amount of money!
+err_srv_no_srvname			Service plan name not submitted!
+err_srv_not_found			Service plan not found!
+err_srv_exists				Service plan already exists!
+err_srv_not_sel				No service plan has been selected!
+err_ip_format				IP address format error!
+err_cm_ip_already_assigned		CM IP address already assigned to user
+err_cpe_ip_already_assigned		CPE IP address already assigned to user
+err_burst_dl				Burst download rate cannot be smaller than nominal download rate!
+err_burst_ul				Burst upload rate cannot be smaller than nominal upload rate!
+err_priority				Priority is valid between 1 - 8!
+err_ulbursttime				Upload burst time is always greater than zero!
+err_dlbursttime				Download burst time is always greater than zero!
+err_cant_find_nas			Cannot find the requested NAS in database!
+err_ias_no_srvname			No Instant access service name entered!
+err_ias_price				Price must be greater than zero!
+err_ias_no_srv				No service plan selected!
+err_ias_downlimit			Download limit must be zero or greater number!
+err_ias_uplimit				Upload limit must be zero or greater number!
+err_ias_totallimit			Total limit must be zero or greater number!
+err_ias_uptimelimit			Uptime limit must be zero or greater number!
+err_ias_expiretime			Available time must be zero or greater number!
+err_ias_exists				Instant access service already exists!
+err_ias_not_found			Instant access service not found!
+err_iaspayment_cancelled		Service purchase cancelled
+err_ias_validity			Validity date format error!
+err_del_def_srv				Default service plan cannot be deleted!
+err_del_def_usergroup			Default user group cannot be deleted!
+err_del_card_user			Card users cannot be deleted!
+err_cc_unsupported_country		Unsupported merchant country!
+err_no_services_available		No service plans available
+err_cc_unsupported_currency		Unsupported system currency!
+err_db					Database error!
+err_acc_already_verified		Account already verified!
+err_acc_not_selfreg			This account is not a self registered user!
+err_invalid_verification		Invalid verification code!
+err_nomoretries				No more tries left!
+err_mobilebanned			Cell number banned!
+err_emailbanned				Email address banned!
+err_not_own_user			Only own users are accessible!
+err_radius_running			RADIUS server is already running!
+err_radius_notrunning			RADIUS server is not running!
+err_dhcp_running			DHCP server is already running!
+err_dhcp_notrunning			DHCP server is not running!
+err_dhcp_file				Error accessing DHCP configuration file!
+err_sms_maxnum				The maximal number of sent SMS codes is reached!
+err_ivalid_value			Invalid value!
+err_wrong_acc_type			Wrong account type!
+err_noreg_user				This user is registered after the beginning of billing period!
+err_invalid_cartid			Invalid cart id!
+err_invalid_warnlevel			Invalid warning level!
+err_tftp				Error generating tftp boot file!
+err_capcode				Invalid seurity code!
+err_acc_exists				skipping, account already exists
+err_nofile				No file submitted!
+err_cantundo				Undo buffer is empty!
+err_invalidapiuser			Invalid or missing API username / password!
+err_apidisabled				API is disabled!
+err_dateunit				Invalid date unit!
+err_payment				System error
+err_amount				Invalid amount!
+
+// system messages
+
+msg_msg_sent				Message sent to
+msg_sync_ok				Rebuild succeeded
+msg_srv_change_same			The same service plan is already scheduled or active
+msg_srv_change_already_scheduled	Service plan change already scheduled to 
+msg_srv_change_scheduled		Service plan change scheduled
+msg_srv_change_cancelled		Service plan change cancelled
+msg_srv_change_completed		Service plan changed
+msg_series_revoked			Prepaid card series revoked
+msg_series_reactivated			Prepaid card series reactivated
+msg_series_deleted			Prepaid card series deleted
+msg_card_revoked			Prepaid card(s) revoked
+msg_card_enabled			Prepaid card(s) enabled
+msg_card_deleted			Prepaid card(s) deleted
+msg_card_entered			Deposit added
+msg_credits_added			Credits added
+msg_cards_generated			Cards generated successfully
+msg_psw_updated				Password updated
+msg_usergroup_created			User group registered
+msg_usergroup_updated			User group updated
+msg_usergroup_deleted			User group(s) deleted
+msg_invoice_updated			Invoice updated
+msg_settings_updated			System settings updated
+msg_psw_changed				Password changed
+msg_user_logged_out			You are logged out
+msg_user_deleted			User(s) deleted
+msg_user_enabled			User(s) enabled
+msg_user_disabled			User(s) disabled
+msg_user_created			Account registered
+msg_user_updated			Account updated
+msg_manager_enabled			Manager(s) enabled
+msg_manager_disabled			Manager(s) disabled
+msg_manager_created			Manager registered
+msg_manager_updated			Manager updated
+msg_manager_deleted			Manager(s) deleted
+msg_service_enabled			Service plan(s) enabled
+msg_service_disabled			Service plan(s) disabled
+msg_service_created			Service plan registered
+msg_service_updated			Service plan updated
+msg_service_deleted			Service plan(s) deleted
+msg_credits_added			Credits added
+msg_nas_created				New NAS registered
+msg_nas_updated				NAS updated
+msg_nas_deleted				NAS deleted
+msg_ap_created				New AP registered
+msg_ap_updated				AP updated
+msg_ap_deleted				AP deleted
+msg_pool_created			New IP pool registered
+msg_pool_updated			IP pool updated
+msg_pool_deleted			IP pool deleted
+msg_cmts_created			New CMTS registered
+msg_cmts_updated			CMTS updated
+msg_cmts_deleted			CMTS deleted
+msg_ias_created				Instant access service registered
+msg_ias_updated				Instant access service updated
+msg_ias_deleted				Instant access service(s) deleted
+msg_ias_enabled				Instant access service(s) enabled
+msg_ias_disabled			Instant access service(s) disabled
+msg_account_verified			Your account is verified
+msg_trial_expires			The license expires on
+msg_acc_credited			Reseller account credited
+msg_code_sent				Sent to cell number
+msg_disconnected			Disconnect request sent
+msg_verifysentemail			Verification code has been sent to your email address
+msg_verifysentsms			Verification code has been sent to your cell phone
+msg_newpswsentemail			The new password has been emailed to your address
+msg_newpswactive			The new password has been sent to your cell phone
+msg_undocomplete			The last bulk imported accounts have been deleted
+
+// array elements
+
+arr_srvtype0				prepaid
+arr_srvtype1				postpaid
+arr_taxtype0				included
+arr_taxtype1				excluded
+arr_paymode0				Cash payment
+arr_paymode1				Bank transfer
+arr_paymode2				Internal
+arr_paymode3				Prepaid card
+arr_paymode4				PayPal Website Payments Standard
+arr_paymode5				PayPal Website Payments Pro
+arr_paymode6				PayPal Express Checkout
+arr_paymode7				Netcash
+arr_paymode8				Authorize.Net
+arr_paymode9				DPS Payment Express
+arr_paymode10				2Checkout
+arr_paymode11				PayFast
+arr_paymode12				PayU
+arr_paymode13				Paytm
+arr_paymode14				bKash
+arr_paymode15				Custom
+arr_paymode16				Flutterwave
+arr_paymode17				Easypay
+arr_paymode18				MPESA
+arr_acctype0				Regular user
+arr_acctype1				MAC-only authentication
+arr_timeunit0				minute(s)
+arr_timeunit1				hour(s)
+arr_timeunit2				day(s)
+arr_timeunit3				month(s)
+arr_month0				january
+arr_month1				february
+arr_month2				march
+arr_month3				april
+arr_month4				may
+arr_month5				june
+arr_month6				july
+arr_month7				august
+arr_month8				september
+arr_month9				october
+arr_month10				november
+arr_month11				december
+arr_cardexpiration0			hours
+arr_cardexpiration1			days
+arr_cardexpiration2			months
+arr_syslog0				Account registered
+arr_syslog1				Account updated
+arr_syslog2				Account deleted
+arr_syslog3				Manager logged in
+arr_syslog4				Manager logged out (user request)
+arr_syslog5				System settings updated
+arr_syslog6				Manager registered
+arr_syslog7				Manager updated
+arr_syslog8				Manager deleted
+arr_syslog9				Service plan registered
+arr_syslog10				Service plan updated
+arr_syslog11				Service plan deleted
+arr_syslog12				NAS registered
+arr_syslog13				NAS updated
+arr_syslog14				NAS deleted
+arr_syslog15				Bulk email operation started
+arr_syslog16				Invoice updated
+arr_syslog17				Special accounting periods updated
+arr_syslog18				Special bandwidth periods updated
+arr_syslog19				User group updated
+arr_syslog20				User group registered
+arr_syslog21				Batch billing started
+arr_syslog22				Card revoked
+arr_syslog23				Card series generated
+arr_syslog24				IAS template registered
+arr_syslog25				IAS template updated
+arr_syslog26				IAS template deleted
+arr_syslog27				IP pool registered
+arr_syslog28				IP pool updated
+arr_syslog29				IP pool deleted
+arr_syslog30				CMTS registered
+arr_syslog31				CMTS updated
+arr_syslog32				CMTS deleted
+arr_syslog33				AP registered
+arr_syslog34				AP updated
+arr_syslog35				AP deleted
+arr_syslog36				Bulk SMS operation started
+arr_syslog37				Login failed
+arr_syslog38				Manager logged out (session timeout)
+arr_syslog39				Self registration
+arr_syslog40				IAS registration
+arr_syslog41				Account enabled
+arr_syslog42				Account disabled
+arr_syslog43				Bulk user import completed
+arr_syslog44				API user logged in
+arr_syslog45				Invalid API login
+arr_syslog46				POD request sent
+arr_syslog47				Credits added
+arr_syslog48				SMS sent
+arr_syslog49				Email sent
+arr_syslog50				API function called
+arr_nastype0				Mikrotik
+arr_nastype1				StarOS
+arr_nastype2				ChilliSpot
+arr_nastype3				Cisco
+arr_nastype4				pfSense
+arr_nastype5				Custom
+arr_apaccessmode0			SNMP (Mikrotik, UBNT <5)
+arr_apaccessmode1			Mikrotik API
+arr_apaccessmode2			SNMP (UBNT 5+)

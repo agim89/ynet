@@ -1,0 +1,166 @@
+ 
+<link rel="stylesheet" href="styles.css" type="text/css">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{NEWSPCPERBW0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="0" cellspacing="1" class="tb-bdr" >
+  <tr> 
+    <td><table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" class="tb-bg">
+        <tr> 
+          <td><form action="admin.php?cont=store_specperbw&nomaintpl=1" method="post" name="form1" id="form1">
+              <p align="center" class="title2"><font color="#FF0000">{ERROR}</font></p>
+              <p align="center" class="title2">{SRVNAME}</p>
+              <table border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr> 
+                  <td><table border="0" align="center" cellpadding="2" cellspacing="2">
+                      <tr> </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWSPCPERBW8}:</div></td>
+                        <td colspan="3" class="normal"><select name="hour1" class="normal" id="select">{HOURS1}
+                          </select> <select name="minute1" class="normal" id="minute1">{MINUTES1}
+                          </select> <select name="second1" class="normal" id="second1">{SECONDS1}
+                          </select> </td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWSPCPERBW9}:</div></td>
+                        <td colspan="3" class="normal"><select name="hour2" class="normal" id="hour2">{HOURS2}
+                          </select> <select name="minute2" class="normal" id="minute2">{MINUTES2}
+                          </select> <select name="second2" class="normal" id="second2">{SECONDS2}
+                          </select> </td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWSPCPERBW10}:</div></td>
+                        <td colspan="3" class="normal"> <input name="dlrate" type="text" class="normal" id="dlrate" value="{DLRATE}" maxlength="11" size="11">
+                          / 
+                          <input name="ulrate" type="text" class="normal" id="ulrate" value="{ULRATE}" maxlength="11" size="11">
+                          {NEWSPCPERBW16}</td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWSPCPERBW11}:</div></td>
+                        <td colspan="3" class="normal"><input name="enableburst" type="checkbox" id="enableburst" value="1" {CHKENBURST} onClick="setBurst()"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWSPCPERBW12}:</div></td>
+                        <td colspan="3" class="normal"><input name="dlburstlimit" type="text" class="normal" id="dlburstlimit" value="{DLBURSTLIMIT}" maxlength="11" size="11">
+                          / 
+                          <input name="ulburstlimit" type="text" class="normal" id="ulburstlimit" value="{ULBURSTLIMIT}" maxlength="11" size="11">
+                          {NEWSPCPERBW16}</td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWSPCPERBW13}:</div></td>
+                        <td colspan="3" class="normal"><input name="dlburstthreshold" type="text" class="normal" id="dlburstthreshold" value="{DLBURSTTHRESHOLD}" maxlength="11" size="11">
+                          / 
+                          <input name="ulburstthreshold" type="text" class="normal" id="ulburstthreshold" value="{ULBURSTTHRESHOLD}" maxlength="11" size="11">
+                          {NEWSPCPERBW16}</td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWSPCPERBW14}:</div></td>
+                        <td colspan="3" class="normal"><input name="dlbursttime" type="text" class="normal" id="dlbursttime" value="{DLBURSTTIME}" maxlength="11" size="11">
+                          / 
+                          <input name="ulbursttime" type="text" class="normal" id="ulbursttime" value="{ULBURSTTIME}" maxlength="11" size="11">
+                          {NEWSPCPERBW17}</td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="normal"><div align="right">{NEWSPCPERBW15}:</div></td>
+                        <td colspan="3" class="normal"><input name="priority" type="text" class="normal" id="priority" value="{PRIORITY}" maxlength="11" size="11"></td>
+                      </tr>
+                    </table></td>
+                  <td width="20">&nbsp;</td>
+                  <td><table width="100%%" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td class="normal"><div align="right">{NEWSPCPERBW1}:</div></td>
+                        <td><input name="mon" type="checkbox" id="mon" value="1" {CHKMON}></td>
+                      </tr>
+                      <tr> 
+                        <td class="normal"><div align="right">{NEWSPCPERBW2}:</div></td>
+                        <td><input name="tue" type="checkbox" id="tue" value="1" {CHKTUE}></td>
+                      </tr>
+                      <tr> 
+                        <td class="normal"><div align="right">{NEWSPCPERBW3}:</div></td>
+                        <td><input name="wed" type="checkbox" id="wed" value="1" {CHKWED}></td>
+                      </tr>
+                      <tr> 
+                        <td class="normal"><div align="right">{NEWSPCPERBW4}:</div></td>
+                        <td><input name="thu" type="checkbox" id="thu" value="1" {CHKTHU}></td>
+                      </tr>
+                      <tr> 
+                        <td class="normal"><div align="right">{NEWSPCPERBW5}:</div></td>
+                        <td><input name="fri" type="checkbox" id="fri" value="1" {CHKFRI}></td>
+                      </tr>
+                      <tr> 
+                        <td class="normal"><div align="right">{NEWSPCPERBW6}:</div></td>
+                        <td><input name="sat" type="checkbox" id="sat" value="1" {CHKSAT}></td>
+                      </tr>
+                      <tr> 
+                        <td class="normal"><div align="right">{NEWSPCPERBW7}:</div></td>
+                        <td><input name="sun" type="checkbox" id="sun" value="1" {CHKSUN}></td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table>
+              <p align="center" class="normal"> 
+                <input type="submit" name="Submit" value="{NEWSPCPERBW18}">
+                <input name="srvid" type="hidden" id="srvid" value="{SRVID}">
+                <script language="JavaScript" type="text/JavaScript">
+setBurst();
+
+function setBurst()
+{
+	var btn1 = document.form1.enableburst.checked;
+	
+	if (btn1)
+	{
+		document.form1.dlburstlimit.style.color = '#000000'
+		document.form1.dlburstlimit.readOnly = false;
+		document.form1.ulburstlimit.style.color = '#000000'
+		document.form1.ulburstlimit.readOnly = false;
+		document.form1.dlburstthreshold.style.color = '#000000'
+		document.form1.dlburstthreshold.readOnly = false;
+		document.form1.ulburstthreshold.style.color = '#000000'
+		document.form1.ulburstthreshold.readOnly = false;
+		document.form1.ulbursttime.style.color = '#000000'
+		document.form1.ulbursttime.readOnly = false;
+		document.form1.dlbursttime.style.color = '#000000'
+		document.form1.dlbursttime.readOnly = false;
+		document.form1.priority.style.color = '#000000'
+		document.form1.priority.readOnly = false;
+	}
+	else
+	{
+		document.form1.dlburstlimit.style.color = '#999999'
+		document.form1.dlburstlimit.readOnly = true;
+		document.form1.ulburstlimit.style.color = '#999999'
+		document.form1.ulburstlimit.readOnly = true;
+		document.form1.dlburstthreshold.style.color = '#999999'
+		document.form1.dlburstthreshold.readOnly = true;
+		document.form1.ulburstthreshold.style.color = '#999999'
+		document.form1.ulburstthreshold.readOnly = true;
+		document.form1.ulbursttime.style.color = '#999999'
+		document.form1.ulbursttime.readOnly = true;
+		document.form1.dlbursttime.style.color = '#999999'
+		document.form1.dlbursttime.readOnly = true;
+		document.form1.priority.style.color = '#999999'
+		document.form1.priority.readOnly = true;
+	}
+}
+</script>
+              </p>
+            </form>
+            <p align="center" class="normal">[<a href="admin.php?cont=list_specperbw&srvid={SRVID}&nomaintpl=1">{NEWSPCPERBW19}</a>]</p></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

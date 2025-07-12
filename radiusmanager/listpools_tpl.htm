@@ -1,0 +1,45 @@
+<link href="styles.css" rel="stylesheet" type="text/css"> 
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{LSTPOOL0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td class="normal" colspan="4">
+        <p align="center" class="quickjump">{QUICKJUMP}</p>
+      </td>
+  </tr>
+  <form name="form1" method="post" action="admin.php?cont=list_pools_action">
+    <tr> 
+      <td colspan="4"> {POOLS} </td>
+    </tr>
+    <tr>
+      <td colspan="4" class="normal"><strong>{LSTPOOL6}: 
+        <select name="action" class="normal" id="action" onchange="Confirm()">
+          <option></option>
+          <option value="0">{LSTPOOL7}</option>
+        </select>
+        </strong> <strong> <font color="#FF0000"><span class="small">&nbsp;</span></font></strong></td>
+    </tr>
+    <tr> 
+      <td class="normal" colspan="4">
+          <p align="center" class="quickjump">{QUICKJUMP}</p>
+        </td>
+    </tr>
+  </form>
+</table>
+
+<script language="JavaScript" src="scripts/helper.js" type="text/JavaScript">
+</script>

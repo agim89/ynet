@@ -1,0 +1,59 @@
+<link href="styles.css" rel="stylesheet" type="text/css">  
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{PAYPAYFAST0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="5" cellspacing="0" class="tb-bg">
+  <tr> 
+    <td><form method="POST" action="{URL}">
+        <table align="center" cellpadding="2" cellspacing="2">
+          <tr class="normal"> 
+            <td colspan="2" class="title3">{PAYPAYFAST1}<br> <br>
+             <input type="hidden" name="merchant_id" value="{MERCH_ID}">
+             <input type="hidden" name="merchant_key" value="{MERCH_KEY}">
+             <input type="hidden" name="return_url" value="{RETURNURL}">
+             <input type="hidden" name="cancel_url" value="{CANCELURL}">
+
+             <!-- Transaction Details -->
+	     <input type="hidden" name="m_payment_id" value="{TRANSID}">
+             <input type="hidden" name="amount" value="{AMOUNT}">
+             <input type="hidden" name="item_name" value="{ITEMNAME}">
+
+             <!-- Transaction Options -->
+             <input type="hidden" name="signature" value="{SIGN}">
+            </td>
+          </tr>
+          <tr class="normal"> 
+            <td> <div align="right">{PAYPAYFAST2}:</div></td>
+            <td align=left><strong>{PRODNAME}</strong></td>
+          </tr>
+          <tr class="normal"> 
+            <td> <div align="right">{PAYPAYFAST3}:</div></td>
+            <td align=left><strong>{QTY}</strong></td>
+          </tr>
+          <tr class="normal"> 
+            <td> <div align="right">{PAYPAYFAST4}:</div></td>
+            <td align=left><strong>{STRPRICE} {CURRENCY} </strong></td>
+          </tr>
+          <tr class="normal"> 
+            <td colspan="2"><div align="center"><br>
+                <input type="submit" name="Submit" id="submit" value="{PAYPAYFAST5}">
+              </div></td>
+          </tr>
+        </table>
+        </form>
+      </td>
+  </tr>
+</table>

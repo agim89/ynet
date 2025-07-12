@@ -1,0 +1,144 @@
+ 
+<link rel="stylesheet" href="styles.css" type="text/css">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{CFMADDCRED0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#D3D9E6" class="tb-bdr">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="5" cellspacing="0" class="tb-bg">
+        <tr> 
+          <td class="title3"><form name="form1" method="post" action="admin.php?cont=add_credits&username={USERNAME}&transid={TRANSID}" onSubmit="return ConfirmMsg('{CFMADDCRED20}')" >
+              <div align="center"> 
+                <p class="title2"><font color="#FF0000">{ERROR}</font></p>
+                <table border="0" align="center" cellpadding="2" cellspacing="2">
+                  <tr> 
+                    <td class="normal"><div align="right">{CFMADDCRED1}:</div></td>
+                    <td class="normal"><strong>{USERNAME}</strong></td>
+                  </tr>
+                  <tr> 
+                    <td class="normal"><div align="right">{CFMADDCRED2}:</div></td>
+                    <td class="normal"><strong>{SRVNAME}</strong></td>
+                  </tr>
+                  <tr> 
+                    <td class="normal"> <div align="right">{CFMADDCRED3}: </div></td>
+                    <td class="normal"><strong>{PAYMODESTR}</strong></td>
+                  </tr>
+                  <tr> 
+                    <td class="normal"><div align="right">{CFMADDCRED4}:</div></td>
+                    <td class="normal"><strong>{TRAFFICUNITDL} MB</strong></td>
+                  </tr>
+                  <tr> 
+                    <td class="normal"><div align="right">{CFMADDCRED21}:</div></td>
+                    <td class="normal"><strong>{TRAFFICUNITUL} MB</strong></td>
+                  </tr>
+                  <tr> 
+                    <td class="normal"><div align="right">{CFMADDCRED22}:</div></td>
+                    <td class="normal"><strong>{TRAFFICUNITCOMB} MB</strong></td>
+                  </tr>
+                  <tr> 
+                    <td class="normal"><div align="right">{CFMADDCRED5}:</div></td>
+                    <td class="normal"><strong>{TIMEUNITEXP} {TIMEBASEEXP}</strong></td>
+                  </tr>
+                  <tr> 
+                    <td class="normal"><div align="right">{CFMADDCRED25}:</div></td>
+                    <td class="normal"><strong>{TIMEUNITONLINE} {TIMEBASEONLINE}</strong></td>
+                  </tr>
+                  <tr> 
+                    <td class="normal"> <div align="right">{CFMADDCRED6}:</div></td>
+                    <td class="normal"><strong> {UNITPRICE} <span class="normal">{CURRENCY} 
+                      <input name="unitprice" type="hidden" class="inputreadonly" id="unitprice" value="{UNITPRICE}" >
+                      <input name="price" type="hidden" class="inputreadonly" id="price" value="{PRICE}" >
+                      <input name="vat" type="hidden" class="inputreadonly" id="vat" value="{VAT}" >
+                      </span></strong><span class="normal"><strong> </strong> 
+                      </span></td>
+                  </tr>
+                  <tr> 
+                    <td class="normal"> <div align="right">{CFMADDCRED7}:</div></td>
+                    <td class="normal"><strong> {AMOUNT} </strong> <strong> 
+                      <input name="amount" type="hidden" class="inputreadonly" id="amount2" value="{AMOUNT}" maxlength="10" size="10" onChange="CalcTotalPrice()">
+                      </strong></td>
+                  </tr>
+                  <tr> 
+                    <td class="normal"><div align="right">{CFMADDCRED9}:</div></td>
+                    <td class="title2left"><table border="0" cellpadding="4" cellspacing="0" bgcolor="#A7BADC">
+                        <tr> 
+                          <td class="normal"> <strong> {TOTALPRICESTR} {CURRENCY} 
+                            <input name="totalprice" type="hidden" class="inputreadonly" id="pricetax2" value="{TOTALPRICE}" readonly>
+                            </strong></td>
+                        </tr>
+                      </table></td>
+                  </tr>
+                  <tr> 
+                    <td colspan="2" class="title3"><p>&nbsp;</p>
+                      <p>{CFMADDCRED11}</p></td>
+                  </tr>
+                  <tr> 
+                    <td class="normal"><div align="right">{CFMADDCRED12}:</div></td>
+                    <td class="normal"><input name="expiration" type="text" class="{INPUTCLASS}" id="expiration" value="{EXPIRATION}" maxlength="10" size="10" {READONLY}>
+                      ({CFMADDCRED15})</td>
+                  </tr>
+                  <tr> 
+                    <td class="normal"><div align="right"> {CFMADDCRED14}:</div></td>
+                    <td><strong> 
+                      <input name="time" type="text" class="{INPUTCLASS}" id="time" value="{TIME}" size="10" maxlength="10" {READONLY}>
+                      </strong><span class="normal">{TIMEBASEONLINE}</span></td>
+                  </tr>
+                  <tr> 
+                    <td class="normal"><div align="right">{CFMADDCRED13}:</div></td>
+                    <td class="normal"><input name="trafficdl" type="text" class="{INPUTCLASS}" id="trafficdl" value="{TRAFFICDL}" {READONLY}>
+                      {CFMADDCRED16} </td>
+                  </tr>
+                  <tr> 
+                    <td class="normal"><div align="right">{CFMADDCRED23}:</div></td>
+                    <td class="normal"><input name="trafficul" type="text" class="{INPUTCLASS}" id="trafficul" value="{TRAFFICUL}" {READONLY}>
+                      {CFMADDCRED16} </td>
+                  </tr>
+                  <tr> 
+                    <td class="normal"><div align="right">{CFMADDCRED24}:</div></td>
+                    <td class="normal"><input name="trafficcomb" type="text" class="{INPUTCLASS}" id="trafficcomb" value="{TRAFFICCOMB}" {READONLY}>
+                      {CFMADDCRED16} </td>
+                  </tr>
+                </table>
+                <SCRIPT type=text/javascript><!--
+focusField("megabytes");
+function focusField(name) {
+  for(var i = 0; i < document.forms.length; ++i) {
+    var obj = document.forms[i].elements[name];
+    if (obj) {
+      if (obj.length) { obj = obj[0]; }
+      if (obj.focus) { obj.focus(); }
+    }
+  }
+} 
+//--> </SCRIPT>
+                <p class="normal">
+                  <input name="Submit" type="submit" id="Submit" value="{CFMADDCRED18}">
+                  <script language="JavaScript" src="scripts/helper.js" type="text/JavaScript">
+</script>
+                  <input name="days" type="hidden" id="days" value="{DAYS}">
+                  <input name="credaddmode" type="hidden" id="credaddmode" value="{CREDADDMODE}">
+                  <input name="paymode" type="hidden" id="paymode" value="{PAYMODE}">
+                  <input name="remark" type="hidden" id="remark" value="{REMARK}">
+                  <input name="comment" type="hidden" id="comment" value="{COMMENT}">
+                </p>
+                </div>
+
+              <p><font color="#FF0000">{CFMADDCRED19}</font> </p>
+            </form></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

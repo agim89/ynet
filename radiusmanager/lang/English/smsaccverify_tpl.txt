@@ -1,0 +1,5 @@
+Your verification code is {VERIFYCODE}. Enter the the code in UCP.
+
+
+Available tags:
+VERIFYCODE - new account verification code

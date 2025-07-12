@@ -1,0 +1,234 @@
+ 
+<link rel="stylesheet" href="styles.css" type="text/css">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+              <tr> 
+                <td class="modtext">{EDITINV0}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><img src="images/spacer.gif" width="1" height="2"></td>
+  </tr>
+</table>
+<table width="80%" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#D3D9E6" class="tb-bdr">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="5" cellspacing="0" class="tb-bg">
+        <tr> 
+          <td><TD > <div align="center"> 
+              <form action="admin.php?cont=update_invoice&id={ID}" method="post" name="form1" id="form1">
+                <div align="center"> 
+                  <p class="title2"><font color="#FF0000">{ERROR}</font></p>
+                  <table border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="title3">{EDITINV1}</td>
+                      <td class="title3">{EDITINV15}</td>
+                    </tr>
+                    <tr> 
+                      <td valign="top"><table border="0" cellspacing="2" cellpadding="2">
+                          <tr class="normal"> 
+                            <td nowrap>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV2}:</div></td>
+                            <td><strong>{INVNUM}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV32}:</div></td>
+                            <td nowrap><strong>{FULLNAME}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV33}:</div></td>
+                            <td nowrap><strong>{ADDRESS}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV34}:</div></td>
+                            <td nowrap><strong>{CITY}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV35}:</div></td>
+                            <td nowrap><strong>{ZIP}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV36}:</div></td>
+                            <td nowrap><strong>{COUNTRY}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV37}:</div></td>
+                            <td nowrap><strong>{STATE}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV3}:</div></td>
+                            <td><strong>{DATE}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV4}:</div></td>
+                            <td nowrap><strong>{PAYMENTOPT}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV13}:</div></td>
+                            <td><input name="paid" type="text" class="normal" id="paid" value="{PAID}" size="10" maxlength="10" {ENREALIZED}> 
+                              <span class="normal"><A NAME="anchor" ID="anchor"><img src="images/cal.gif" width="16" height="15"
+			  onClick="cal.select(document.forms['form1'].paid,'anchor','yyyy-MM-dd'); return false;"></A> 
+                              ({EDITINV38}) </span> <DIV ID="div1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+                              <SCRIPT LANGUAGE="JavaScript" SRC="scripts/calendarpopup.js"></SCRIPT> 
+                              <SCRIPT LANGUAGE="JavaScript">
+var cal = new CalendarPopup("div1");
+document.write(getCalendarStyles());
+focusField("fromdate");
+function focusField(name) {
+  for(var i = 0; i < document.forms.length; ++i) {
+    var obj = document.forms[i].elements[name];
+    if (obj) {
+      if (obj.length) { obj = obj[0]; }
+      if (obj.focus) { obj.focus(); }
+    }
+  }
+} 
+</SCRIPT></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV6}:</div></td>
+                            <td nowrap><strong> {SRVNAME}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV5}:</div></td>
+                            <td nowrap><strong>{PAYMODE}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV31}:</div></td>
+                            <td nowrap><strong>{GWTRANSID}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV7}: </div></td>
+                            <td nowrap><strong>{UNITPRICE} {CURRENCY}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV8}: </div></td>
+                            <td nowrap><strong>{AMOUNT}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV10}:</div></td>
+                            <td nowrap><strong>{VATPERCENT} %</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV9}:</div></td>
+                            <td nowrap><strong>{PRICE} {CURRENCY}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV11}:</div></td>
+                            <td nowrap><strong>{VAT} {CURRENCY}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV12}: </div></td>
+                            <td nowrap><strong>{TOTALPRICE} {CURRENCY}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV14}:</div></td>
+                            <td> <input name="comment" type="text" class="normal" id="comment" value="{COMMENT}" size="40" maxlength="70"></td>
+                          </tr>
+                        </table></td>
+                      <td valign="top"><table border="0" cellspacing="2" cellpadding="2">
+                          <tr class="normal"> 
+                            <td nowrap>&nbsp;</td>
+                            <td nowrap>&nbsp;</td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV16}:</div></td>
+                            <td nowrap><strong>{MANAGERNAME}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV17}:</div></td>
+                            <td nowrap><strong>{USERNAME}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV18}:</div></td>
+                            <td nowrap><strong>{TRAFFICDL}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV28}:</div></td>
+                            <td nowrap><strong>{TRAFFICUL}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV29}:</div></td>
+                            <td nowrap><strong>{TRAFFICCOMB}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV19}:</div></td>
+                            <td nowrap><strong>{DOWNLIMIT}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV20}:</div></td>
+                            <td nowrap><strong>{UPLIMIT}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV30}:</div></td>
+                            <td nowrap><strong>{COMBLIMIT}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV21}:</div></td>
+                            <td nowrap> <p><strong>{TIME}</strong></p></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV22}:</div></td>
+                            <td nowrap> <p><strong>{UPTIMELIMIT}</strong></p></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV23}:</div></td>
+                            <td nowrap><strong> {DAYS}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV24}:</div></td>
+                            <td nowrap><strong> {EXPIRATION}</strong></td>
+                          </tr>
+                          <tr class="normal"> 
+                            <td nowrap><div align="right">{EDITINV27}:</div></td>
+                            <td nowrap><strong>{BALANCE} {CURRENCY}</strong></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr> 
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+                  <p> 
+                    <input name="Submit" type="submit" id="Submit" value="{EDITINV25}">
+<SCRIPT type=text/javascript><!--
+
+if (!document.form1.paid.disabled)
+	focusField("paid");
+
+function focusField(name)
+{
+	for(var i = 0; i < document.forms.length; ++i)
+	{
+		var obj = document.forms[i].elements[name];
+		if (obj)
+		{
+			if (obj.length)
+				obj = obj[0];
+			if (obj.focus)
+				obj.focus();
+		}
+	}
+} 
+//--> </SCRIPT>
+                  </p>
+                  </div>
+                  </form>
+                  
+            </div>
+                
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<p align="center" class="normal">[<a href="admin.php?cont=print_invoice&id={ID}" target="_blank">{EDITINV26}</a>]</p>
