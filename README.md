@@ -1,2 +1,2 @@
 # ynet
-Y-Net  (PHP-Javascript-MySQL)
+Y-Net APP (PHP-Javascript-MySQL)
