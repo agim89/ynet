@@ -270,6 +270,31 @@ function genPsw()
                               <td class="normal"><input name="comblimit" type="text" class="normal" id="comblimit" value="{COMBLIMIT}" maxlength="25" size="20" {EN_COMBLIMIT}>
                                 {NEWUSR32}</td>
                             </tr>
+							
+							<!--
+							<tr> 
+							  <td nowrap class="normal"><div align="right"><p style="width:40px" id="paidText"><font color="#FF0000">* </font>Paid:</p></div></td>
+                        	  <td class="normal"><p> 
+                              <input name="cnic" type="text" class=normal id="cnic" value="{CNIC}" maxlength="3" size="10" pattern="YES|Yes|yes|NO|No|no|" placeholder="Enter Yes/No" required>
+                          	  </p></td>
+                      	    </tr>
+							-->
+							
+						<tr>		
+						  <td nowrap class="normal"><div align="right"><p style="width:40px" id="paidText"><font color="#FF0000">* </font>Paid:</p></div></td>						
+						  <td nowrap class="normal"><strong> 
+                            <select name="cnic" class="normal" id="cnic" required>
+							  <option value="" hidden>--Select--</option>
+							  <option value="YES">YES</option>
+							  <option value="NO">NO</option>
+                            </select>
+                            </strong>
+						  </td>
+						</tr>
+							
+							
+							
+
                             <tr> 
                               <td nowrap class="normal"><div align="right">{NEWUSR20}:</div></td>
                               <td class="normal"><p> 
@@ -337,10 +362,14 @@ function CountLeft(field, max)
                               <td nowrap class="normal"><div align="right">{NEWUSR46}:</div></td>
                               <td class="normal"><textarea name="custattr" cols="55" rows="5" class="normal" id="custattr">{CUSTATTR}</textarea></td>
                             </tr>
+
+                            <!--
                             <tr> 
                               <td nowrap class="normal"><div align="right">{NEWUSR58}:</div></td>
-                              <td class="normal"><input name="cnic" type="text" class=normal id="cnic" value="{CNIC}" maxlength="30" size="30"></td>
+                              <td class="normal"><input name="cnic1" type="text" class=normal id="cnic" value="{CNIC}" maxlength="30" size="30"></td>
                             </tr>
+			    -->
+
                           </table></td>
                       </tr>
                       <tr> 
