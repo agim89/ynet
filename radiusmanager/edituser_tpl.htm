@@ -100,44 +100,6 @@ function genPsw()
 	document.form1.changepsw.checked = true;
 }
 
-function sendTelegramMessage(message) {
-  /*
-  const token = 'bot7212292059:8192614168:AAGB4E1oAAWxPJxA6ZqLiK7CIY8rigZi_Vw'; // Zavendeso me token-in tua1j - Updated
-  const chatId = '5231866997'; // Zëvendësoni me chat ID-në tuaj
-  const url = `https://api.telegram.org/bot${token}/sendMessage`;
-
-  fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text: message
-    })
-  }).then(response => response.json())
-    .then(data => console.log("Mesazhi u dërgua me sukses", data))
-    .catch(error => console.error("Gabim në dërgimin e mesazhit", error));
-   */
-   
-  const token = '7450086970:AAE9ndG8RfIOyhLQymQ2-RD-WO2uu7dpJYs'; // Zavendeso me token-in tua1j - Updated
-  const chatId = '8134846720'; // Zëvendësoni me chat ID-në tuaj
-  const url = `https://api.telegram.org/bot${token}/sendMessage`;
-
-  fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text: message
-    })
-  }).then(response => response.json())
-    .then(data => console.log("Mesazhi u dërgua me sukses", data))
-    .catch(error => console.error("Gabim në dërgimin e mesazhit", error)); 
-}
-
 
 function showPsw()
 {
@@ -368,40 +330,41 @@ function focusField(name) {
                         <td nowrap class="normal"><input name="comblimit" type="text" class="normal" id="comblimit" value="{COMBLIMIT}" maxlength="25" size="20" {EN_COMBLIMIT}>
                           {EDUSR39}</td>
                       </tr>
-                 
-				 <tr>
-				 <td>  		
-				<div align="right">					
-				<p class="normal"> 
-                <input type="button" name="ndryshobtn" id="ndryshobtn" value="Ndrysho" onClick="ndryshoPaidAndExpirationDate()">
-              </p>
-			  </div>
-			  </td>
-			  <td>  		
-				  <div align="center">					
-				    <p class="normal"> 
-					 <input type="button" name="ruajbtn" id="ruajbtn" value="Ruaj" onClick="editUserAndDisconnect('{USERNAME}')">
-                   </p>
-			     </div>
-			    </td>
-				 </tr>
+
+                      <tr></tr>
+                        <td>
+                          <div align="right">
+                            <p class="normal">
+                              <input type="button" name="ndryshobtn" id="ndryshobtn" value="Ndrysho" onClick="ndryshoPaidAndExpirationDate()">
+                            </p>
+                          </div>
+                        </td>
+                        <td>
+                          <div align="center">
+                            <p class="normal">
+                               <input type="submit" name="ruajbtn" id="ruajbtn" value="Ruaj">
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
 				 
-                      <tr> 
-						<td nowrap class="normal"><div align="right"><p style="width:40px" id="paidText"><font id="paidRequiredFn" color="#FF0000">* </font>Paid:</p></div></td>
-                        
-						<!--
-						<td class="normal"><p> 
-                            <input name="cnic" type="text" class=normal id="cnic" value="{CNIC}" maxlength="3" size="10" pattern="YES|Yes|yes|NO|No|no|"  placeholder="Enter Yes/No" required>
-                          </p></td>
-						 --> 
-						
-						<td nowrap class="normal"><strong> 
-                          <select name="cnic" class="normal" id="cnic" required onChange="checkPaidStatusColorOnChange()" disabled>
-							<option value="YES">YES</option>
-							<option value="NO">NO</option>
-                          </select>
+                      <tr>
+                        <td nowrap class="normal">
+                          <div align="right">
+                            <p style="width:40px" id="paidText">
+                              <font id="paidRequiredFn" color="#FF0000">* </font>Paid:
+                            </p>
+                          </div>
+                        </td>
+                    
+                      
+                        <td nowrap class="normal"><strong>
+                            <select name="cnic" class="normal" id="cnic" required onChange="checkPaidStatusColorOnChange()" disabled>
+                              <option value="YES">YES</option>
+                              <option value="NO">NO</option>
+                            </select>
                           </strong>
-						</td>  
+                        </td>
                       </tr>
 
 		
@@ -427,16 +390,15 @@ setIPModeCPE();
 
 
 function ndryshoPaidAndExpirationDate() {
-    console.log("ndrysho button")
+  console.log("ndrysho button1")
 	document.getElementById("cnic").value = "";
 	document.getElementById("cnic").disabled = false;
-	document.getElementById("expiration").value = "";
 	document.getElementById("expiration").disabled = false;
-	
 }
 
-function editUserAndDisconnect(username) {
-console.log("Deisconnect: ", username)
+function editUserAndDisconnect() {
+const username = ('{USERNAME}');
+console.log("Deisconnect: ",  username)
 
 
 // Run the same logic submitList() would have handled
@@ -502,28 +464,47 @@ window.addEventListener('DOMContentLoaded', setSelectedPaidValue);
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    var username = `{FIRSTNAME} {LASTNAME}`
+    var username = ('{USERNAME}');
 	var originalExpiration = ('{EXPIRATION}');
     // Hook into the form submit event
     const form = document.getElementById('form1');
     if (form) {
       form.addEventListener('submit', function (e) {
+
+        document.getElementById("expiration").disabled = false;
+	      document.getElementById("cnic").disabled = false;
+
         const currentExpiration = document.getElementById('expiration').value;
         if (originalExpiration !== currentExpiration) {
-          const message = `📅Expiration date has been changed to ${username}: oldDate: ${originalExpiration} to newDate: ${currentExpiration}`;
+          const message = `Expiration date has been changed to ${username}: oldDate: ${originalExpiration} to newDate: ${currentExpiration}. Paid Status: ${document.getElementById("cnic").value}`;
 		  sendTelegramMessage(message)
         } 
+        console.log("Disconnect: save changes edit user")
+        // editUserAndDisconnect(username)
       });
     }
   });
-  
 
-// This function is not needed the logic is wrong, sending telegram messages even the form is not submited and is called only if the text input is changed not the value from calendar
-function notifyExpiry() {
-  const expiryDate = document.getElementById('accountExpiry').value;
-  const message = `Data e skadencës së llogarisë është ndryshuar në: ${expiryDate}`;
-  sendTelegramMessage(message);
+function sendTelegramMessage(message) {
+
+const data = { message: message };
+
+fetch("http://31.3.95.250/radiusmanager1/telebot.php", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json; charset=UTF-8"
+  },
+  body: JSON.stringify(data)
+})
+.then(response => {
+  if (!response.ok) throw new Error("Server error " + response.status);
+  return response.json();
+})
+.then(data => console.log("✅ Sent:", data))
+.catch(err => console.error("❌ Error:", err));
+
 }
+  
 
 function setIPModeCM()
 {
