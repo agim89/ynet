@@ -24,7 +24,7 @@
   <tr> 
     <td><table width="100%" border="0" cellpadding="5" cellspacing="0" class="tb-bg">
         <tr> 
-          <td><form name="form1" action="admin.php?cont=update_user&username={USERNAME}" method="post" enctype="multipart/form-data">
+          <td><form name="form1" action="admin.php?cont=update_user&username={USERNAME}" method="post" enctype="multipart/form-data" id="form1">
               <p align="center" class="title3"><font color="#FF0000">{ERROR}</font></p>
               <table border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr> 
@@ -98,24 +98,6 @@ function genPsw()
 	document.form1.password2.type = 'text';
 	document.form1.showpsw.checked = true;
 	document.form1.changepsw.checked = true;
-}
-function sendTelegramMessage(message) {
-  const token = 'bot7212292059:AAHirRKvlN4SR1bO_KpZb88TmFI9xT-Hb0g'; // Zëvendësoni me token-in tuaj
-  const chatId = '5231866997'; // Zëvendësoni me chat ID-në tuaj
-  const url = `https://api.telegram.org/bot${token}/sendMessage`;
-
-  fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text: message
-    })
-  }).then(response => response.json())
-    .then(data => console.log("Mesazhi u dërgua me sukses", data))
-    .catch(error => console.error("Gabim në dërgimin e mesazhit", error));
 }
 
 
@@ -348,17 +330,54 @@ function focusField(name) {
                         <td nowrap class="normal"><input name="comblimit" type="text" class="normal" id="comblimit" value="{COMBLIMIT}" maxlength="25" size="20" {EN_COMBLIMIT}>
                           {EDUSR39}</td>
                       </tr>
+
+                      <tr></tr>
+                        <td>
+                          <div align="right">
+                            <p class="normal">
+                              <input type="button" name="ndryshobtn" id="ndryshobtn" value="Ndrysho" onClick="ndryshoPaidAndExpirationDate()">
+                            </p>
+                          </div>
+                        </td>
+                        <td>
+                          <div align="center">
+                            <p class="normal">
+                               <input type="submit" name="ruajbtn" id="ruajbtn" value="Ruaj">
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+				 
+                      <tr>
+                        <td nowrap class="normal">
+                          <div align="right">
+                            <p style="width:40px" id="paidText">
+                              <font id="paidRequiredFn" color="#FF0000">* </font>Paid:
+                            </p>
+                          </div>
+                        </td>
+                    
+                      
+                        <td nowrap class="normal"><strong>
+                            <select name="cnic" class="normal" id="cnic" required onChange="checkPaidStatusColorOnChange()" disabled>
+                              <option value="YES">YES</option>
+                              <option value="NO">NO</option>
+                            </select>
+                          </strong>
+                        </td>
+                      </tr>
+
+		
                       <tr> 
                         <td nowrap class="normal"><div align="right"> 
                             <table border="0" cellpadding="0" cellspacing="0" bgcolor="{BG_LIMITEXPIRATION}">
                               <tr> 
-                                <td class="normal"> {EDUSR17}:</td>
+                                <td class="normal"><font id="paidRequiredFn" color="#FF0000">* </font> {EDUSR17}:</td>
                               </tr>
                             </table>
                           </div></td>
-						  <input type="text" id="accountExpiry" onchange="notifyExpiry()" placeholder="Shëno datën e skadencës" />
-                        <td nowrap class="normal"> <p> 
-                            <input name="expiration" type="text" class=normal id="expiration" value="{EXPIRATION}" maxlength="19" size="19" {EN_EXPIRATION}>
+                        <td nowrap class="normal"> <p>
+                            <input name="expiration" type="text" class=normal id="expiration" value="{EXPIRATION}" maxlength="19" size="19" {EN_EXPIRATION} required disabled>
                             <A NAME="anchor1" ID="anchor1"><img src="images/cal.gif" width="16" height="15"
 			  onClick="cal.select(document.forms['form1'].expiration,'anchor1','yyyy-MM-dd'); return false;"></A> 
                             ({EDUSR40}) 
@@ -369,11 +388,123 @@ document.write(getCalendarStyles());
 setIPModeCM();
 setIPModeCPE();
 
-function notifyExpiry() {
-  const expiryDate = document.getElementById('accountExpiry').value;
-  const message = `Data e skadencës së llogarisë është ndryshuar në: ${expiryDate}`;
-  sendTelegramMessage(message);
+
+function ndryshoPaidAndExpirationDate() {
+  console.log("ndrysho button1")
+	document.getElementById("cnic").value = "";
+	document.getElementById("cnic").disabled = false;
+	document.getElementById("expiration").disabled = false;
 }
+
+function editUserAndDisconnect() {
+const username = ('{USERNAME}');
+console.log("Deisconnect: ",  username)
+
+
+// Run the same logic submitList() would have handled
+  if (typeof submitList === 'function') {
+    submitList(); // fill fromdate and todate
+  }
+
+  // Now get those computed values from the form
+  const fromdate = document.form1.fromdate?.value;
+  const todate = document.form1.todate?.value;
+
+  // Prepare form data
+  const formData = new FormData();
+  formData.append("username", username);
+  formData.append("fromdate", fromdate);
+  formData.append("todate", todate);
+
+  fetch("admin.php?cont=disconn_user", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => {
+    if (!response.ok) throw new Error("Network response was not OK");
+    return response.text();
+  })
+  .then(data => {
+    console.log("Disconnected:", data);
+	window.location.href = `http://31.3.95.250/radiusmanager1/admin.php?cont=update_user&username=${encodeURIComponent(username)}`;
+  })
+  .catch(error => {
+    console.error("Error:", error);
+  });
+  
+}
+
+
+function setSelectedPaidValue() {
+  var paid = ('{CNIC}');
+  document.getElementById("cnic").value = paid;
+ }
+ 
+function checkPaidStatusColorOnChange() {
+ var label = document.getElementById("paidText");
+ label.style.backgroundColor = "transparent";
+}
+
+function checkPaidStatus() {
+  var input = ('{CNIC}').trim().toUpperCase();
+  var label = document.getElementById("paidText");
+
+  if (input === "YES") {
+    label.style.backgroundColor = "#00E51B"; // Green
+  } else if (input === "NO") {
+    label.style.backgroundColor = "FF3E3E"; // Red
+    document.getElementById("paidRequiredFn").color = "#000000"  // Black
+  }else{
+    label.style.backgroundColor = "transparent";
+  }
+}
+
+window.addEventListener('DOMContentLoaded', checkPaidStatus);
+window.addEventListener('DOMContentLoaded', setSelectedPaidValue);
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var username = ('{USERNAME}');
+	var originalExpiration = ('{EXPIRATION}');
+    // Hook into the form submit event
+    const form = document.getElementById('form1');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+
+        document.getElementById("expiration").disabled = false;
+	      document.getElementById("cnic").disabled = false;
+
+        const currentExpiration = document.getElementById('expiration').value;
+        if (originalExpiration !== currentExpiration) {
+          const message = `Expiration date has been changed to ${username}: oldDate: ${originalExpiration} to newDate: ${currentExpiration}. Paid Status: ${document.getElementById("cnic").value}`;
+		  sendTelegramMessage(message)
+        } 
+        console.log("Disconnect: save changes edit user")
+        // editUserAndDisconnect(username)
+      });
+    }
+  });
+
+function sendTelegramMessage(message) {
+
+const data = { message: message };
+
+fetch("http://31.3.95.250/radiusmanager1/telebot.php", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json; charset=UTF-8"
+  },
+  body: JSON.stringify(data)
+})
+.then(response => {
+  if (!response.ok) throw new Error("Server error " + response.status);
+  return response.json();
+})
+.then(data => console.log("✅ Sent:", data))
+.catch(err => console.error("❌ Error:", err));
+
+}
+  
 
 function setIPModeCM()
 {
@@ -533,12 +664,16 @@ function editCustAttr()
                             </tr>
                           </table></td>
                       </tr>
+
+       		      <!--
                       <tr> 
                         <td nowrap class="normal"><div align="right">{EDUSR99}:</div></td>
                         <td class="normal"><p> 
-                            <input name="cnic" type="text" class=normal id="cnic" value="{CNIC}" maxlength="30" size="30">
+                            <input name="cnic1" type="text" class=normal id="cnic1" value="{CNIC}" maxlength="30" size="30">
                           </p></td>
                       </tr>
+		      -->
+       
                       <tr> 
                         <td colspan="2" nowrap class="normal"><table border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#BAC9E4">
                             <tr> 
